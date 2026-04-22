@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Business Growth - Portfolio</title>
+<title>Shopify Growth Studio</title>
 
 <style>
 :root{
-  --bg:#fbf7f2;
+  --bg:#f6f3ef;
   --text:#1d1d1d;
   --muted:#6a6a6a;
   --accent:#2f6f5e;
-  --border:#eee7dd;
+  --border:#e9e2d8;
 }
 
 *{
@@ -43,31 +43,13 @@ header{
 }
 
 .logo{
-  display:flex;
-  align-items:center;
-  gap:8px;
   font-weight:800;
   font-size:13px;
 }
 
-.shopify-icon{
-  width:18px;
-  height:18px;
-}
-
-.lang-switch button{
-  margin-left:6px;
-  padding:6px 10px;
-  border:1px solid var(--border);
-  background:#fff;
-  cursor:pointer;
-  border-radius:6px;
-  font-size:12px;
-}
-
 /* HERO */
 .hero{
-  padding:22px 5%;
+  padding:40px 5% 20px;
 }
 
 .hero-grid{
@@ -76,8 +58,12 @@ header{
   align-items:center;
 }
 
+.hero-text{
+  flex:1;
+}
+
 .hero-text h1{
-  font-size:26px;
+  font-size:28px;
   line-height:1.2;
   margin-bottom:10px;
 }
@@ -85,59 +71,105 @@ header{
 .hero-text p{
   font-size:14px;
   color:var(--muted);
-  line-height:1.5;
-  margin-bottom:12px;
+  line-height:1.6;
+  margin-bottom:18px;
 }
 
 .cta a{
   display:inline-block;
   background:var(--accent);
   color:#fff;
-  padding:10px 14px;
-  border-radius:8px;
-  font-size:13px;
+  padding:12px 16px;
+  border-radius:10px;
   text-decoration:none;
+  font-size:13px;
 }
 
-/* SECTIONS */
-.section{
-  padding:14px 5%;
+/* HERO IMAGE (RESTORED) */
+.hero-visual{
+  flex:1;
+  position:relative;
 }
 
-.section h2{
-  font-size:16px;
-  margin-bottom:6px;
+.hero-visual img.main{
+  width:100%;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-.box{
+/* GRAPH OVERLAY (your original idea) */
+.hero-visual img.overlay{
+  position:absolute;
+  top:-20px;
+  left:-20px;
+  width:120%;
+  opacity:0.10;
+}
+
+/* VALUE GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  padding:20px 5%;
+}
+
+.card{
   background:#fff;
   border:1px solid var(--border);
-  padding:12px;
   border-radius:12px;
+  padding:14px;
   font-size:13px;
   color:var(--muted);
   line-height:1.5;
 }
 
-/* GRIDS */
-.services-grid,
-.skills-grid{
+/* STRATEGY */
+.section{
+  padding:10px 5%;
+}
+
+.section h2{
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+.highlight{
+  background:#fff;
+  border:1px solid var(--border);
+  padding:14px;
+  border-radius:12px;
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* RESULTS */
+.results{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
+  padding:10px 5%;
 }
 
-/* GRAPH */
-.graph img{
-  width:100%;
-  border-radius:12px;
-  margin-top:8px;
+.result-box{
+  background:#fff;
+  border-left:4px solid var(--accent);
+  padding:12px;
+  border-radius:10px;
+  font-size:13px;
+  color:var(--muted);
 }
 
-/* FINAL */
+/* FINAL CTA */
 .final{
   text-align:center;
-  padding:20px 5%;
+  padding:30px 5%;
+}
+
+.final h2{
+  font-size:20px;
+  margin-bottom:10px;
 }
 
 .final a{
@@ -145,9 +177,9 @@ header{
   margin-top:10px;
   background:var(--accent);
   color:#fff;
+  padding:12px 16px;
+  border-radius:10px;
   text-decoration:none;
-  padding:10px 14px;
-  border-radius:8px;
 }
 
 /* FLOAT */
@@ -156,13 +188,13 @@ header{
   bottom:18px;
   right:18px;
   background:#25D366;
-  color:#fff;
-  width:48px;
-  height:48px;
+  width:50px;
+  height:50px;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
+  color:#fff;
   font-size:22px;
 }
 
@@ -181,160 +213,78 @@ header{
 <div class="container">
 
 <header>
-  <div class="logo">
-    <img class="shopify-icon" src="https://cdn.worldvectorlogo.com/logos/shopify.svg">
-    BUSINESS GROWTH
-  </div>
-
-  <div class="lang-switch">
-    <button onclick="setLang('hy')">AM</button>
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('ru')">RU</button>
-  </div>
+  <div class="logo">SHOPIFY GROWTH STUDIO</div>
 </header>
 
-<!-- HERO -->
+<!-- HERO (WITH IMAGE RESTORED) -->
 <section class="hero">
   <div class="hero-grid">
 
     <div class="hero-text">
-      <h1 data-i18n="hero_title">Քո բիզնեսը կարող է սկսել իրական օնլայն վաճառքներ</h1>
+      <h1>Turn Your Shopify Store Into a Sales System</h1>
 
-      <p data-i18n="hero_text">
-        Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։
+      <p>
+        I build conversion-focused Shopify landing pages and store systems that don’t just look good — they generate consistent sales.
       </p>
 
       <div class="cta">
-        <a href="#" data-i18n="cta">Գրել WhatsApp-ում</a>
+        <a href="#">Start on WhatsApp</a>
       </div>
+    </div>
+
+    <div class="hero-visual">
+      <!-- YOUR MAIN HERO IMAGE -->
+      <img class="main" src="https://www.e-ways.com.tw/upload/article/article_479.jpg">
+
+      <!-- GRAPHIC OVERLAY IMAGE (your original idea restored) -->
+      <img class="overlay" src="https://t4.ftcdn.net/jpg/09/00/62/97/360_F_900629727_nLFzv8NdpbQEefppwbBUbpqDBBsl6uWB.jpg">
     </div>
 
   </div>
 </section>
 
-<!-- PROBLEM -->
+<!-- VALUE -->
+<section class="grid">
+
+  <div class="card">
+    Shopify stores are not design problems — they are conversion systems.
+  </div>
+
+  <div class="card">
+    Most stores fail because they are built without sales structure.
+  </div>
+
+</section>
+
+<!-- STRATEGY -->
 <section class="section">
-  <div class="box" data-i18n="problem">
-    Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ կառուցված համակարգ, որը կօգնի դրանք արդյունավետ վաճառել օնլայն հարթակներում։ Սա է պատճառը, որ վաճառքները մնում են սահմանափակ, նույնիսկ երբ կա պահանջարկ։
+  <h2>What I Build</h2>
+
+  <div class="highlight">
+    I design Shopify ecosystems: landing pages, product flow, UX structure, and conversion paths that turn visitors into buyers.
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="section">
-  <h2 data-i18n="services_title">Տամադրվող ծառայություններ</h2>
+<!-- RESULTS -->
+<section class="results">
 
-  <div class="box">
-    UI/UX դիզայն, վեբ կայքերի կառուցում և վաճառքի համակարգերի ստեղծում՝ Success Academy-ում ստացած մասնագիտական պատրաստվածությամբ։
-  </div>
+  <div class="result-box">✔ Higher conversion structure</div>
+  <div class="result-box">✔ Mobile-first Shopify UX</div>
+  <div class="result-box">✔ Optimized product flow</div>
+  <div class="result-box">✔ Sales-focused landing pages</div>
 
-  <div class="services-grid" style="margin-top:10px;">
-    <div class="box">Վաճառք ապահովող landing էջերի կառուցում</div>
-    <div class="box">Օնլայն խանութի կառուցում և կարգավորում (Shopify store setup)</div>
-    <div class="box">Բոլոր սարքերին հարմարեցված կայքերի ստեղծում (Responsive Design)</div>
-    <div class="box">Կայքերի դիզայն և վաճառքի օպտիմիզացում (Redesign & optimization)</div>
-    <div class="box">Հավելվածների ինտեգրում Apps & Tools</div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="section">
-  <h2 data-i18n="skills_title">Կիրառվող հմտություններ</h2>
-
-  <div class="skills-grid">
-
-    <div class="box">Shopify Development & Theme Customization</div>
-    <div class="box">Shopify Templates & Website Redesign</div>
-
-    <div class="box">HTML5 / CSS3 / Liquid (Shopify Coding)</div>
-    <div class="box">Landing Page Design & Conversion Optimization</div>
-
-    <div class="box">Product Listings & Store Structuring</div>
-    <div class="box">Microsoft Excel & Data Entry Systems</div>
-
-  </div>
-</section>
-
-<!-- GRAPH -->
-<section class="section">
-  <h2 data-i18n="growth_title">Աճի պատկերացում</h2>
-
-  <div class="graph">
-    <img src="https://t4.ftcdn.net/jpg/09/00/62/97/360_F_900629727_nLFzv8NdpbQEefppwbBUbpqDBBsl6uWB.jpg">
-  </div>
-
-  <div class="box">
-    Ճիշտ կառուցված էջը կարող է զգալիորեն բարձրացնել քո վաճառքները առանց լրացուցիչ գովազդի։
-  </div>
 </section>
 
 <!-- FINAL -->
 <section class="final">
-  <h2 data-i18n="final_title">Եկ սկսենք ստեղծել էջ, որը աշխատում է քո փոխարեն</h2>
+  <h2>Let’s Build a Shopify Store That Actually Sells</h2>
 
-  <a href="#" data-i18n="cta">Գրել WhatsApp-ում</a>
+  <a href="#">Contact on WhatsApp</a>
 </section>
 
 </div>
 
 <a class="whatsapp-float">💬</a>
-
-<script>
-const translations = {
-  hy:{
-    hero_title:"Քո բիզնեսը կարող է սկսել իրական օնլայն վաճառքներ",
-    hero_text:"Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։",
-    cta:"Գրել WhatsApp-ում",
-    problem:"Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ համակարգ վաճառքի համար։",
-    services_title:"Տամադրվող ծառայություններ",
-    skills_title:"Կիրառվող հմտություններ",
-    growth_title:"Աճի պատկերացում",
-    final_title:"Եկ սկսենք ստեղծել էջ, որը աշխատում է քո փոխարեն"
-  },
-en:{
-  hero_title:"Turn your business into a system that generates real online sales",
-  
-  hero_text:"I design high-converting landing pages and Shopify systems that turn visitors into real customers — not just traffic.",
-
-  cta:"Contact on WhatsApp",
-
-  problem:"Many businesses have strong products, but lack a structured system to convert visitors into paying customers.",
-
-  services_title:"Services",
-
-  skills_title:"Core Skills",
-
-  growth_title:"Performance Overview",
-
-  final_title:"Let’s build a page that actually drives results for your business"
-}
-  },
- ru:{
-  hero_title:"Ваш бизнес может превратиться в систему реальных онлайн-продаж",
-
-  hero_text:"Я создаю продающие лендинги и Shopify-решения, которые превращают посетителей в клиентов.",
-
-  cta:"Связаться в WhatsApp",
-
-  problem:"У многих бизнесов есть сильные продукты, но нет системы, которая превращает трафик в реальные продажи.",
-
-  services_title:"Услуги",
-
-  skills_title:"Навыки",
-
-  growth_title:"Результаты и рост",
-
-  final_title:"Давайте создадим страницу, которая реально приносит продажи вашему бизнесу"
-}
-
-function setLang(lang){
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const key = el.dataset.i18n;
-    if(translations[lang][key]){
-      el.innerText = translations[lang][key];
-    }
-  });
-}
-</script>
 
 </body>
 </html>
