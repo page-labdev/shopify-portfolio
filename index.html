@@ -26,7 +26,6 @@ body{
   color:var(--text);
 }
 
-/* CONTAINER */
 .container{
   max-width:900px;
   margin:0 auto;
@@ -47,6 +46,24 @@ header{
   font-size:13px;
 }
 
+/* LANGUAGE SWITCH */
+.lang-switch{
+  display:flex;
+  gap:8px;
+}
+
+.lang-switch button{
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-size:12px;
+  color:var(--muted);
+}
+
+.lang-switch button:hover{
+  color:var(--accent);
+}
+
 /* HERO */
 .hero{
   padding:40px 5% 20px;
@@ -63,20 +80,17 @@ header{
 }
 
 .hero-text h1{
-  font-size:28px;
-  line-height:1.2;
+  font-size:26px;
   margin-bottom:10px;
 }
 
 .hero-text p{
   font-size:14px;
   color:var(--muted);
-  line-height:1.6;
   margin-bottom:18px;
 }
 
 .cta a{
-  display:inline-block;
   background:var(--accent);
   color:#fff;
   padding:12px 16px;
@@ -85,7 +99,6 @@ header{
   font-size:13px;
 }
 
-/* HERO IMAGE (RESTORED) */
 .hero-visual{
   flex:1;
   position:relative;
@@ -94,19 +107,17 @@ header{
 .hero-visual img.main{
   width:100%;
   border-radius:14px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* GRAPH OVERLAY (your original idea) */
 .hero-visual img.overlay{
   position:absolute;
   top:-20px;
   left:-20px;
   width:120%;
-  opacity:0.10;
+  opacity:0.1;
 }
 
-/* VALUE GRID */
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -121,17 +132,11 @@ header{
   padding:14px;
   font-size:13px;
   color:var(--muted);
-  line-height:1.5;
 }
 
-/* STRATEGY */
+/* SECTION */
 .section{
   padding:10px 5%;
-}
-
-.section h2{
-  font-size:16px;
-  margin-bottom:8px;
 }
 
 .highlight{
@@ -141,7 +146,6 @@ header{
   border-radius:12px;
   font-size:13px;
   color:var(--muted);
-  line-height:1.6;
 }
 
 /* RESULTS */
@@ -158,23 +162,19 @@ header{
   padding:12px;
   border-radius:10px;
   font-size:13px;
-  color:var(--muted);
 }
 
-/* FINAL CTA */
+/* FINAL */
 .final{
   text-align:center;
   padding:30px 5%;
 }
 
 .final h2{
-  font-size:20px;
   margin-bottom:10px;
 }
 
 .final a{
-  display:inline-block;
-  margin-top:10px;
   background:var(--accent);
   color:#fff;
   padding:12px 16px;
@@ -195,7 +195,6 @@ header{
   align-items:center;
   justify-content:center;
   color:#fff;
-  font-size:22px;
 }
 
 /* MOBILE */
@@ -214,29 +213,29 @@ header{
 
 <header>
   <div class="logo">SHOPIFY GROWTH STUDIO</div>
+
+  <div class="lang-switch">
+    <button onclick="setLang('hy')">HY</button>
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('ru')">RU</button>
+  </div>
 </header>
 
-<!-- HERO (WITH IMAGE RESTORED) -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-grid">
 
     <div class="hero-text">
-      <h1>Turn Your Shopify Store Into a Sales System</h1>
-
-      <p>
-        I build conversion-focused Shopify landing pages and store systems that don’t just look good — they generate consistent sales.
-      </p>
+      <h1 id="hero_title"></h1>
+      <p id="hero_text"></p>
 
       <div class="cta">
-        <a href="#">Start on WhatsApp</a>
+        <a id="cta_btn" href="https://wa.me/0000000000"></a>
       </div>
     </div>
 
     <div class="hero-visual">
-      <!-- YOUR MAIN HERO IMAGE -->
       <img class="main" src="https://www.e-ways.com.tw/upload/article/article_479.jpg">
-
-      <!-- GRAPHIC OVERLAY IMAGE (your original idea restored) -->
       <img class="overlay" src="https://t4.ftcdn.net/jpg/09/00/62/97/360_F_900629727_nLFzv8NdpbQEefppwbBUbpqDBBsl6uWB.jpg">
     </div>
 
@@ -245,46 +244,100 @@ header{
 
 <!-- VALUE -->
 <section class="grid">
-
-  <div class="card">
-    Shopify stores are not design problems — they are conversion systems.
-  </div>
-
-  <div class="card">
-    Most stores fail because they are built without sales structure.
-  </div>
-
+  <div class="card" id="value1"></div>
+  <div class="card" id="value2"></div>
 </section>
 
 <!-- STRATEGY -->
 <section class="section">
-  <h2>What I Build</h2>
-
-  <div class="highlight">
-    I design Shopify ecosystems: landing pages, product flow, UX structure, and conversion paths that turn visitors into buyers.
-  </div>
+  <div class="highlight" id="strategy"></div>
 </section>
 
 <!-- RESULTS -->
 <section class="results">
-
-  <div class="result-box">✔ Higher conversion structure</div>
-  <div class="result-box">✔ Mobile-first Shopify UX</div>
-  <div class="result-box">✔ Optimized product flow</div>
-  <div class="result-box">✔ Sales-focused landing pages</div>
-
+  <div class="result-box" id="r1"></div>
+  <div class="result-box" id="r2"></div>
+  <div class="result-box" id="r3"></div>
+  <div class="result-box" id="r4"></div>
 </section>
 
 <!-- FINAL -->
 <section class="final">
-  <h2>Let’s Build a Shopify Store That Actually Sells</h2>
-
-  <a href="#">Contact on WhatsApp</a>
+  <h2 id="final_title"></h2>
+  <a id="final_cta" href="https://wa.me/0000000000"></a>
 </section>
 
 </div>
 
-<a class="whatsapp-float">💬</a>
+<a class="whatsapp-float" href="https://wa.me/0000000000">💬</a>
+
+<script>
+const content = {
+
+hy:{
+  hero_title:"Քո Shopify խանութը կարող է դառնալ իրական վաճառքի համակարգ",
+  hero_text:"Ես ստեղծում եմ վաճառք ապահովող Shopify էջեր և կառուցվածքներ, որոնք ոչ միայն գեղեցիկ են, այլ նաև բերում են իրական արդյունք։",
+  cta:"Գրել WhatsApp-ում",
+  value1:"Shopify կայքը պարզապես դիզայն չէ — դա վաճառքի համակարգ է։",
+  value2:"Շատ խանութներ չեն վաճառում, քանի որ չունեն ճիշտ կառուցվածք։",
+  strategy:"Ես կառուցում եմ ամբողջական Shopify էկոհամակարգ՝ landing էջեր, UX կառուցվածք և վաճառքի հոսքեր։",
+  r1:"✔ Բարձր կոնվերսիա",
+  r2:"✔ Mobile-first փորձ",
+  r3:"✔ Օպտիմիզացված վաճառքի հոսք",
+  r4:"✔ Վաճառք ապահովող էջեր",
+  final_title:"Եկ ստեղծենք էջ, որը աշխատում է քո փոխարեն",
+  final_cta:"Սկսել հիմա"
+},
+
+en:{
+  hero_title:"Turn your Shopify store into a real sales system",
+  hero_text:"I build conversion-focused Shopify pages and structures that not only look good, but actually drive results.",
+  cta:"Message on WhatsApp",
+  value1:"A Shopify store is not just design — it's a sales system.",
+  value2:"Most stores don’t sell because they lack proper structure.",
+  strategy:"I build complete Shopify ecosystems: landing pages, UX structure, and conversion flows.",
+  r1:"✔ Higher conversion rates",
+  r2:"✔ Mobile-first experience",
+  r3:"✔ Optimized sales flow",
+  r4:"✔ Sales-driven pages",
+  final_title:"Let’s build a page that works for you",
+  final_cta:"Start now"
+},
+
+ru:{
+  hero_title:"Превратите ваш Shopify магазин в систему продаж",
+  hero_text:"Я создаю Shopify страницы и структуры, которые не просто выглядят красиво, а реально приносят результат.",
+  cta:"Написать в WhatsApp",
+  value1:"Shopify сайт — это не просто дизайн, это система продаж.",
+  value2:"Многие магазины не продают из-за отсутствия структуры.",
+  strategy:"Я создаю полноценные Shopify системы: лендинги, UX-структуру и воронки продаж.",
+  r1:"✔ Повышение конверсии",
+  r2:"✔ Mobile-first подход",
+  r3:"✔ Оптимизированная воронка продаж",
+  r4:"✔ Продающие страницы",
+  final_title:"Давайте создадим страницу, которая работает за вас",
+  final_cta:"Начать сейчас"
+}
+
+};
+
+function setLang(lang){
+  document.getElementById("hero_title").innerText = content[lang].hero_title;
+  document.getElementById("hero_text").innerText = content[lang].hero_text;
+  document.getElementById("cta_btn").innerText = content[lang].cta;
+  document.getElementById("value1").innerText = content[lang].value1;
+  document.getElementById("value2").innerText = content[lang].value2;
+  document.getElementById("strategy").innerText = content[lang].strategy;
+  document.getElementById("r1").innerText = content[lang].r1;
+  document.getElementById("r2").innerText = content[lang].r2;
+  document.getElementById("r3").innerText = content[lang].r3;
+  document.getElementById("r4").innerText = content[lang].r4;
+  document.getElementById("final_title").innerText = content[lang].final_title;
+  document.getElementById("final_cta").innerText = content[lang].final_cta;
+}
+
+setLang('hy');
+</script>
 
 </body>
 </html>
