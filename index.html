@@ -137,16 +137,26 @@ header{
   margin-top:10px;
 }
 
-/* FINAL */
+/* FINAL (FIXED SPACING) */
 .final{
   text-align:center;
-  padding:30px 5%;
+  padding:40px 5%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+}
+
+.final h2{
+  margin-bottom:6px;
+  font-size:20px;
+  line-height:1.3;
 }
 
 .final a{
   background:var(--accent);
   color:#fff;
-  padding:12px 16px;
+  padding:12px 18px;
   border-radius:10px;
   text-decoration:none;
 }
@@ -249,24 +259,22 @@ header{
   </div>
 </section>
 
-<!-- SERVICES (FIXED + CLEAN) -->
+<!-- SERVICES -->
 <section class="section">
   <h2 id="services_title"></h2>
 
   <div class="highlight" id="services_intro"></div>
 
   <div class="services-grid">
-
     <div class="card" id="s1"></div>
     <div class="card" id="s2"></div>
     <div class="card" id="s3"></div>
     <div class="card" id="s4"></div>
     <div class="card" id="s5"></div>
-
   </div>
 </section>
 
-<!-- GROWTH (NO HEADING TEXT AS REQUESTED) -->
+<!-- GROWTH -->
 <section class="section">
 
   <div class="graph">
@@ -277,7 +285,7 @@ header{
 
 </section>
 
-<!-- FINAL -->
+<!-- FINAL (FIXED SAFE + SPACING) -->
 <section class="final">
   <h2 id="final_title"></h2>
   <a id="final_cta" href="" target="_blank"></a>
@@ -322,22 +330,22 @@ hy:{
 
 en:{
   hero_title:"Turn your website into a real sales system",
-  hero_text:"I help small businesses build high-converting landing pages that bring real customers.",
+  hero_text:"I help small businesses build landing pages that generate real customers.",
   cta:"Message on WhatsApp",
 
   value_1:"Your website is not just design — it is a conversion system.",
   value_2:"Most websites fail because they are not built for sales.",
 
   services_title:"Services",
-  services_intro:"Conversion-focused Shopify development, UI/UX design, and sales optimization.",
+  services_intro:"Conversion-focused Shopify development and UI/UX design.",
 
-  s1:"✔ High-converting landing page development",
-  s2:"✔ Shopify store setup & configuration",
-  s3:"✔ Fully responsive website development",
-  s4:"✔ Redesign & performance optimization",
+  s1:"✔ High-converting landing pages",
+  s2:"✔ Shopify store setup",
+  s3:"✔ Fully responsive websites",
+  s4:"✔ Redesign & optimization",
   s5:"✔ Apps & tools integration",
 
-  growth_text:"A properly structured landing page increases conversions without extra advertising.",
+  growth_text:"A properly structured page increases conversions without extra ads.",
 
   final_title:"Let’s build a website that actually sells",
   final_cta:"Start now"
@@ -345,22 +353,22 @@ en:{
 
 ru:{
   hero_title:"Превратите сайт в систему продаж",
-  hero_text:"Я создаю лендинги и Shopify-магазины, которые привлекают клиентов и увеличивают продажи.",
+  hero_text:"Я создаю Shopify-магазины и лендинги, которые приводят клиентов.",
   cta:"Написать в WhatsApp",
 
-  value_1:"Сайт — это не дизайн, а система продаж.",
-  value_2:"Большинство сайтов не работают из-за отсутствия структуры продаж.",
+  value_1:"Сайт — это система продаж, а не просто дизайн.",
+  value_2:"Большинство сайтов не работают из-за отсутствия структуры.",
 
   services_title:"Услуги",
-  services_intro:"UI/UX дизайн, разработка Shopify и создание конверсионных систем.",
+  services_intro:"Разработка Shopify и UI/UX дизайн с фокусом на продажи.",
 
-  s1:"✔ Разработка продающих лендингов",
+  s1:"✔ Продающие лендинги",
   s2:"✔ Настройка Shopify-магазина",
-  s3:"✔ Адаптивная разработка сайтов",
+  s3:"✔ Адаптивные сайты",
   s4:"✔ Редизайн и оптимизация",
-  s5:"✔ Интеграция приложений и инструментов",
+  s5:"✔ Интеграция приложений",
 
-  growth_text:"Грамотно построенная страница увеличивает продажи без дополнительных затрат на рекламу.",
+  growth_text:"Хорошо построенная страница увеличивает продажи без рекламы.",
 
   final_title:"Создадим сайт, который продаёт",
   final_cta:"Начать"
@@ -372,31 +380,31 @@ function setLang(lang){
 
   const d = content[lang];
 
-  document.getElementById("hero_title").innerText = d.hero_title;
-  document.getElementById("hero_text").innerText = d.hero_text;
+  document.getElementById("hero_title").innerText = d.hero_title || "";
+  document.getElementById("hero_text").innerText = d.hero_text || "";
 
-  document.getElementById("cta_btn").innerText = d.cta;
-  document.getElementById("cta_btn").href = waLink(d.cta);
+  document.getElementById("cta_btn").innerText = d.cta || "";
+  document.getElementById("cta_btn").href = waLink(d.cta || "");
 
   document.getElementById("wa_float").href = waLink("Hello");
 
-  document.getElementById("value_1").innerText = d.value_1;
-  document.getElementById("value_2").innerText = d.value_2;
+  document.getElementById("value_1").innerText = d.value_1 || "";
+  document.getElementById("value_2").innerText = d.value_2 || "";
 
-  document.getElementById("services_title").innerText = d.services_title;
-  document.getElementById("services_intro").innerText = d.services_intro;
+  document.getElementById("services_title").innerText = d.services_title || "";
+  document.getElementById("services_intro").innerText = d.services_intro || "";
 
-  document.getElementById("s1").innerText = d.s1;
-  document.getElementById("s2").innerText = d.s2;
-  document.getElementById("s3").innerText = d.s3;
-  document.getElementById("s4").innerText = d.s4;
-  document.getElementById("s5").innerText = d.s5;
+  document.getElementById("s1").innerText = d.s1 || "";
+  document.getElementById("s2").innerText = d.s2 || "";
+  document.getElementById("s3").innerText = d.s3 || "";
+  document.getElementById("s4").innerText = d.s4 || "";
+  document.getElementById("s5").innerText = d.s5 || "";
 
-  document.getElementById("growth_text").innerText = d.growth_text;
+  document.getElementById("growth_text").innerText = d.growth_text || "";
 
-  document.getElementById("final_title").innerText = d.final_title;
-  document.getElementById("final_cta").innerText = d.final_cta;
-  document.getElementById("final_cta").href = waLink(d.final_cta);
+  document.getElementById("final_title").innerText = d.final_title || "";
+  document.getElementById("final_cta").innerText = d.final_cta || "";
+  document.getElementById("final_cta").href = waLink(d.final_cta || "");
 }
 
 setLang('hy');
