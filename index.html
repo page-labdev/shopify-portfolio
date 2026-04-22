@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Business Growth Landing</title>
+<title>Business Growth - WhatsApp Leads</title>
 
 <style>
 :root{
   --bg:#fbf7f2;
-  --card:#ffffff;
   --text:#1d1d1d;
   --muted:#6a6a6a;
   --accent:#2f6f5e;
@@ -67,17 +66,17 @@ header{
   line-height:1.6;
 }
 
+/* CTA */
 .cta{
   margin-top:15px;
-  display:flex;
-  gap:10px;
 }
 
-.cta button{
+.cta a{
+  display:inline-block;
   background:var(--accent);
   color:#fff;
-  border:none;
-  padding:10px 14px;
+  text-decoration:none;
+  padding:12px 14px;
   border-radius:10px;
   font-size:13px;
 }
@@ -92,58 +91,59 @@ header{
   margin-bottom:8px;
 }
 
-.section p{
-  font-size:14px;
-  color:var(--muted);
-  line-height:1.6;
-}
-
-/* TRUST BOX */
 .box{
   background:#fff;
   border:1px solid var(--border);
   padding:14px;
   border-radius:14px;
-  margin-top:10px;
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.6;
 }
 
-/* GRAPH SECTION */
-.graph{
-  margin-top:12px;
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:12px;
-}
-
+/* GRAPH */
 .graph img{
   width:100%;
   height:160px;
   object-fit:cover;
-  border-radius:10px;
+  border-radius:14px;
+  margin-top:10px;
 }
 
-/* CTA */
+/* FINAL CTA */
 .final{
   text-align:center;
   padding:30px 5%;
 }
 
-.final h2{
-  font-size:20px;
-  line-height:1.3;
-}
-
-.final button{
+.final a{
+  display:inline-block;
   margin-top:15px;
   background:var(--accent);
   color:#fff;
-  border:none;
+  text-decoration:none;
   padding:12px 16px;
   border-radius:10px;
 }
 
-/* FOOTER */
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+  position:fixed;
+  bottom:18px;
+  right:18px;
+  background:#25D366;
+  color:#fff;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
 footer{
   text-align:center;
   padding:20px;
@@ -159,22 +159,22 @@ footer{
   <div class="logo">BUSINESS GROWTH</div>
 </header>
 
-<!-- HERO (IMAGE 1) -->
+<!-- HERO (FIXED IMAGE) -->
 <section class="hero">
 
-  <img src="https://images.unsplash.com/photo-1556741533-f6acd647d2fb?w=1200"/>
+  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"/>
 
-  <h1>
-    Քո բիզնեսը կարող է ունենալ իրական օնլայն վաճառքներ
-  </h1>
+  <h1>Քո բիզնեսը կարող է սկսել իրական օնլայն վաճառքներ</h1>
 
   <p>
-    Ես օգնում եմ փոքր և միջին բիզնեսներին ստեղծել պարզ, արագ և վաճառք ապահովող էջեր, որոնք իրական հաճախորդներ են բերում։
+    Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։
+    Սկսիր հիմա՝ առանց բարդ գործընթացների։
   </p>
 
   <div class="cta">
-    <button>Իմանալ ավելին</button>
-    <button>Կապվել</button>
+    <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20ստանալ%20օնլայն%20վաճառքի%20էջ">
+      Գրել WhatsApp-ում
+    </a>
   </div>
 </section>
 
@@ -184,7 +184,6 @@ footer{
 
   <div class="box">
     Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ համակարգ դրանք օնլայն վաճառելու համար։
-    Սոցիալական ցանցերը միայն չեն ապահովում կայուն վաճառք։
   </div>
 </section>
 
@@ -193,10 +192,10 @@ footer{
   <h2>Լուծումը</h2>
 
   <div class="box">
-    ✔ Պարզ վաճառքի կառուցվածք<br>
+    ✔ Պարզ վաճառքի էջ<br>
     ✔ Mobile-first դիզայն<br>
-    ✔ Արագ բեռնվող էջ<br>
-    ✔ Վաճառքի կենտրոնացված UI
+    ✔ Արագ բեռնվող կայք<br>
+    ✔ Վաճառքի կենտրոնացված կառուցվածք
   </div>
 </section>
 
@@ -210,16 +209,16 @@ footer{
   </div>
 </section>
 
-<!-- GRAPH (IMAGE 2) -->
+<!-- GRAPH -->
 <section class="section">
   <h2>Աճի պատկերացում</h2>
 
   <div class="graph">
-    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200"/>
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"/>
   </div>
 
   <div class="box">
-    Ճիշտ կառուցված էջը կարող է զգալիորեն բարձրացնել քո վաճառքները՝ առանց լրացուցիչ գովազդի բյուջեի մեծացման։
+    Ճիշտ կառուցված էջը կարող է զգալիորեն բարձրացնել քո վաճառքները առանց լրացուցիչ գովազդի։
   </div>
 </section>
 
@@ -234,12 +233,19 @@ footer{
 
 <!-- FINAL CTA -->
 <section class="final">
-  <h2>
-    Պատրա՞ստ ես զարգացնել քո բիզնեսը
-  </h2>
+  <h2>Սկսե՞նք քո բիզնեսի աճը հիմա</h2>
 
-  <button>Իմանալ ավելին</button>
+  <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20սկսել%20օնլայն%20վաճառք">
+    Գրել WhatsApp-ում
+  </a>
 </section>
+
+<!-- FLOAT BUTTON -->
+<a class="whatsapp-float"
+   href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20խորհրդատվություն"
+   target="_blank">
+  💬
+</a>
 
 <footer>
   Business Growth Landing Page
