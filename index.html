@@ -26,7 +26,7 @@ body{
   color:var(--text);
 }
 
-/* A4 container */
+/* CONTAINER */
 .container{
   max-width:900px;
   margin:0 auto;
@@ -119,50 +119,19 @@ header{
   line-height:1.5;
 }
 
-/* GRAPH */
-.graph img{
-  width:100%;
-  border-radius:12px;
-  margin-top:8px;
-}
-
-/* ACCORDION */
-.accordion{
-  border:1px solid var(--border);
-  border-radius:12px;
-  background:#fff;
-  margin-top:10px;
-  overflow:hidden;
-}
-
-.accordion-header{
-  padding:12px;
-  font-size:14px;
-  font-weight:600;
-  cursor:pointer;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.accordion-content{
-  max-height:0;
-  overflow:hidden;
-  transition:0.3s ease;
-  padding:0 12px;
-}
-
-.accordion.active .accordion-content{
-  max-height:1200px;
-  padding:12px;
-}
-
-/* GRID DESKTOP */
+/* GRIDS */
 .services-grid,
 .skills-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
+}
+
+/* GRAPH */
+.graph img{
+  width:100%;
+  border-radius:12px;
+  margin-top:8px;
 }
 
 /* FINAL CTA */
@@ -181,7 +150,7 @@ header{
   border-radius:8px;
 }
 
-/* FLOAT */
+/* FLOAT BUTTON */
 .whatsapp-float{
   position:fixed;
   bottom:18px;
@@ -197,16 +166,57 @@ header{
   font-size:22px;
 }
 
-/* RESPONSIVE */
+/* ========================= */
+/* 🔥 MOBILE OPTIMIZATION ONLY */
+/* ========================= */
 @media(max-width:900px){
+
+  .hero{
+    padding:16px 5%;
+  }
+
   .hero-grid{
     flex-direction:column;
     text-align:center;
+    gap:14px;
+  }
+
+  .hero-text h1{
+    font-size:22px;
+    margin-bottom:8px;
+  }
+
+  .hero-text p{
+    font-size:13px;
+    line-height:1.4;
+  }
+
+  .section{
+    padding:10px 5%;
+  }
+
+  .section h2{
+    font-size:15px;
+    margin-bottom:4px;
+  }
+
+  .box{
+    padding:10px;
+    font-size:12.5px;
+    line-height:1.4;
   }
 
   .services-grid,
   .skills-grid{
-    display:none;
+    gap:6px;
+  }
+
+  .graph img{
+    margin-top:6px;
+  }
+
+  .final{
+    padding:16px 5%;
   }
 }
 </style>
@@ -255,7 +265,7 @@ header{
   </div>
 </section>
 
-<!-- SERVICES (ACCORDION) -->
+<!-- SERVICES -->
 <section class="section">
   <h2>Տամադրվող ծառայություններ</h2>
 
@@ -263,43 +273,48 @@ header{
     UI/UX դիզայն, վեբ կայքերի կառուցում և վաճառքի համակարգերի ստեղծում՝ Success Academy-ում ստացած մասնագիտական պատրաստվածությամբ։
   </div>
 
-  <div class="accordion" onclick="this.classList.toggle('active')">
-    <div class="accordion-header">
-      Ծառայությունների ցանկ <span>+</span>
-    </div>
-
-    <div class="accordion-content">
-      <div class="box">
-        Landing էջերի կառուցում<br>
-        Shopify store setup<br>
-        UI/UX դիզայն<br>
-        WhatsApp funnel համակարգեր<br>
-        Responsive կայքեր<br>
-        Redesign & optimization
-      </div>
-    </div>
+  <div class="services-grid" style="margin-top:10px;">
+    <div class="box">Landing էջերի կառուցում</div>
+    <div class="box">Shopify store setup</div>
+    <div class="box">UI/UX դիզայն</div>
+    <div class="box">WhatsApp funnel համակարգեր</div>
+    <div class="box">Responsive կայքեր</div>
+    <div class="box">Redesign & optimization</div>
   </div>
 </section>
 
-<!-- SKILLS (ACCORDION) -->
+<!-- SKILLS -->
 <section class="section">
   <h2>Հմտություններ</h2>
 
-  <div class="accordion" onclick="this.classList.toggle('active')">
-    <div class="accordion-header">
-      Տեխնիկական հմտություններ <span>+</span>
-    </div>
+  <div class="skills-grid">
 
-    <div class="accordion-content">
-      <div class="box">
-        Shopify, Shopify Development, Shopify Theme, Shopify Templates, Shopify Website Redesign, Liquid, HTML5, CSS3, Responsive Design, Landing Page Design, Conversion Rate Optimization, Product Listings, Microsoft Excel, Data Entry, Navigation System Design
-      </div>
-    </div>
+    <div class="box">Shopify</div>
+    <div class="box">Shopify Development</div>
+    <div class="box">Shopify Theme</div>
+
+    <div class="box">Shopify Templates</div>
+    <div class="box">Shopify Website Redesign</div>
+    <div class="box">Liquid</div>
+
+    <div class="box">HTML5</div>
+    <div class="box">CSS3</div>
+    <div class="box">Responsive Design</div>
+
+    <div class="box">Landing Page Design</div>
+    <div class="box">Conversion Rate Optimization</div>
+    <div class="box">Product Listings</div>
+
+    <div class="box">Microsoft Excel</div>
+    <div class="box">Data Entry</div>
+    <div class="box">Navigation System Design</div>
+
   </div>
 </section>
 
 <!-- GRAPH -->
 <section class="section">
+  <h2>Աճի պատկերացում</h2>
 
   <div class="graph">
     <img src="https://t4.ftcdn.net/jpg/09/00/62/97/360_F_900629727_nLFzv8NdpbQEefppwbBUbpqDBBsl6uWB.jpg">
@@ -329,14 +344,6 @@ header{
 </div>
 
 <a class="whatsapp-float">💬</a>
-
-<script>
-document.querySelectorAll('.accordion').forEach(acc=>{
-  acc.addEventListener('click',()=>{
-    acc.classList.toggle('active');
-  });
-});
-</script>
 
 </body>
 </html>
