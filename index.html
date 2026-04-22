@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Portfolio | Shopify Specialist</title>
+<title>Shopify Conversion Portfolio</title>
 
 <style>
 :root{
-  --bg:#0e0f13;
-  --card:#161824;
-  --text:#ffffff;
-  --muted:#a9b0c3;
-  --accent:#7c5cff;
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --text:#12131a;
+  --muted:#5b6475;
+  --accent:#5b4dff;
+  --border:#e7e9f2;
 }
 
 *{
@@ -24,7 +25,6 @@
 body{
   background:var(--bg);
   color:var(--text);
-  overflow-x:hidden;
 }
 
 /* HEADER */
@@ -32,23 +32,22 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:20px 6%;
+  padding:18px 6%;
 }
 
 .logo{
-  font-weight:700;
+  font-weight:800;
   letter-spacing:1px;
 }
 
 .lang button{
-  background:transparent;
-  border:1px solid #2a2d3a;
-  color:var(--text);
+  background:#fff;
+  border:1px solid var(--border);
   padding:6px 10px;
   margin-left:5px;
   cursor:pointer;
-  border-radius:6px;
-  transition:0.3s;
+  border-radius:8px;
+  transition:0.2s;
 }
 
 .lang button:hover{
@@ -58,20 +57,20 @@ header{
 
 /* HERO */
 .hero{
-  padding:80px 6% 40px;
+  padding:70px 6% 40px;
+  max-width:1000px;
 }
 
 .hero h1{
   font-size:42px;
   line-height:1.2;
-  max-width:800px;
 }
 
 .hero p{
   margin-top:15px;
   color:var(--muted);
-  max-width:600px;
   font-size:16px;
+  max-width:700px;
 }
 
 .cta{
@@ -84,65 +83,89 @@ header{
   color:white;
   padding:12px 18px;
   margin-right:10px;
-  border-radius:8px;
+  border-radius:10px;
   cursor:pointer;
-  transition:0.3s;
 }
 
-.cta button:hover{
-  transform:translateY(-2px);
-}
-
-/* SKILLS */
+/* SECTION */
 .section{
-  padding:60px 6%;
+  padding:50px 6%;
 }
 
 .section h2{
-  margin-bottom:20px;
-  font-size:26px;
+  font-size:22px;
+  margin-bottom:15px;
 }
 
+.section p{
+  color:var(--muted);
+  max-width:800px;
+  line-height:1.6;
+}
+
+/* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:15px;
+  margin-top:20px;
 }
 
 .card{
   background:var(--card);
-  padding:20px;
-  border-radius:12px;
-  transition:0.3s;
-  cursor:pointer;
+  border:1px solid var(--border);
+  padding:18px;
+  border-radius:14px;
+  transition:0.2s;
 }
 
 .card:hover{
-  transform:translateY(-5px);
-  border:1px solid var(--accent);
+  transform:translateY(-4px);
+  border-color:var(--accent);
 }
 
-/* CASE STUDY */
-.case{
+/* PROCESS */
+.steps{
   display:flex;
   flex-wrap:wrap;
   gap:15px;
+  margin-top:20px;
 }
 
-.case-box{
+.step{
   flex:1;
-  min-width:250px;
+  min-width:220px;
   background:var(--card);
-  padding:20px;
-  border-radius:12px;
+  border:1px solid var(--border);
+  padding:18px;
+  border-radius:14px;
 }
 
-/* FOOTER */
+/* CTA BOTTOM */
+.bottom{
+  text-align:center;
+  padding:60px 6%;
+}
+
+.bottom h2{
+  font-size:26px;
+}
+
+.bottom button{
+  margin-top:20px;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:12px 20px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
 footer{
   text-align:center;
-  padding:40px;
+  padding:30px;
   color:var(--muted);
-  font-size:14px;
+  font-size:13px;
 }
 </style>
 </head>
@@ -150,7 +173,7 @@ footer{
 <body>
 
 <header>
-  <div class="logo">SHOPIFY BUILDER</div>
+  <div class="logo">SHOPIFY CONVERSION LAB</div>
 
   <div class="lang">
     <button onclick="setLang('hy')">AM</button>
@@ -162,17 +185,27 @@ footer{
 <!-- HERO -->
 <section class="hero">
   <h1 data-i18n="hero_title">
-    Ես կառուցում եմ Shopify էջեր, որոնք վաճառում են, ոչ թե պարզապես գեղեցիկ են
+    Ես կառուցում եմ Shopify էջեր, որոնք իրականում վաճառում են
   </h1>
 
   <p data-i18n="hero_sub">
-    Shopify specialist · Liquid · UI/UX · Conversion-focused development
+    Shopify specialist focused on conversion UI, Liquid development and high-performing landing pages.
+    My goal is not design — it is results.
   </p>
 
   <div class="cta">
-    <button data-i18n="btn_projects">Նախագծեր</button>
-    <button data-i18n="btn_contact">Կապ</button>
+    <button data-i18n="btn_projects">Դիտել աշխատանքները</button>
+    <button data-i18n="btn_contact">Կապ հաստատել</button>
   </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <h2 data-i18n="about_title">Ինչ եմ անում</h2>
+  <p data-i18n="about_text">
+    Ես կենտրոնացած եմ Shopify փորձի վրա, որտեղ յուրաքանչյուր էջ կառուցված է վաճառք ստեղծելու համար։
+    Ես աշխատում եմ UI կառուցվածքի, արագության, mobile UX-ի և customer flow-ի վրա։
+  </p>
 </section>
 
 <!-- SKILLS -->
@@ -181,79 +214,122 @@ footer{
 
   <div class="grid">
     <div class="card" data-i18n="skill1">Shopify Theme Development</div>
-    <div class="card" data-i18n="skill2">Liquid Custom Sections</div>
-    <div class="card" data-i18n="skill3">Conversion UI Design</div>
+    <div class="card" data-i18n="skill2">Liquid / Custom Sections</div>
+    <div class="card" data-i18n="skill3">Conversion UI Architecture</div>
     <div class="card" data-i18n="skill4">Mobile Optimization</div>
+    <div class="card" data-i18n="skill5">Performance Optimization</div>
+    <div class="card" data-i18n="skill6">Landing Page Strategy</div>
   </div>
 </section>
 
-<!-- CASE STUDY -->
+<!-- PROCESS -->
 <section class="section">
-  <h2 data-i18n="case_title">Փոքր Case Study</h2>
+  <h2 data-i18n="process_title">Աշխատանքի մոտեցում</h2>
 
-  <div class="case">
-    <div class="case-box" data-i18n="case1">
-      Shopify product page optimization → improved user flow & clarity
+  <div class="steps">
+    <div class="step" data-i18n="step1">
+      1. Վերլուծում եմ ապրանքի նպատակն ու հաճախորդի վարքը
     </div>
 
-    <div class="case-box" data-i18n="case2">
-      Fixed mobile interaction issues in custom sections
+    <div class="step" data-i18n="step2">
+      2. Կառուցում եմ UI կառուցվածք՝ վաճառքի հոսքով
+    </div>
+
+    <div class="step" data-i18n="step3">
+      3. Օպտիմիզացնում եմ mobile և performance
+    </div>
+
+    <div class="step" data-i18n="step4">
+      4. Տրամադրում եմ պատրաստ conversion-ready էջ
     </div>
   </div>
+</section>
+
+<!-- CTA -->
+<section class="bottom">
+  <h2 data-i18n="cta_title">
+    Պատրաստ ես բարձրացնել քո Shopify վաճառքները?
+  </h2>
+
+  <button data-i18n="cta_btn">Եկեք սկսենք</button>
 </section>
 
 <footer data-i18n="footer">
-  Designed for Shopify-focused development showcase
+  Shopify Conversion Portfolio · Built for GitHub Pages
 </footer>
 
 <script>
 const translations = {
   hy:{
-    hero_title:"Ես կառուցում եմ Shopify էջեր, որոնք վաճառում են, ոչ թե պարզապես գեղեցիկ են",
-    hero_sub:"Shopify specialist · Liquid · UI/UX · Conversion-focused development",
-    btn_projects:"Նախագծեր",
-    btn_contact:"Կապ",
+    hero_title:"Ես կառուցում եմ Shopify էջեր, որոնք իրականում վաճառում են",
+    hero_sub:"Shopify specialist focused on conversion UI, Liquid development և բարձր արդյունավետ landing pages.",
+    btn_projects:"Դիտել աշխատանքները",
+    btn_contact:"Կապ հաստատել",
+    about_title:"Ինչ եմ անում",
+    about_text:"Ես կենտրոնացած եմ Shopify փորձի վրա, որտեղ յուրաքանչյուր էջ կառուցված է վաճառք ստեղծելու համար։",
     skills_title:"Հմտություններ",
     skill1:"Shopify Theme Development",
-    skill2:"Liquid Custom Sections",
-    skill3:"Conversion UI Design",
+    skill2:"Liquid / Custom Sections",
+    skill3:"Conversion UI Architecture",
     skill4:"Mobile Optimization",
-    case_title:"Փոքր Case Study",
-    case1:"Shopify product page optimization → բարելավված օգտատիրոջ հոսք",
-    case2:"Mobile interaction խնդիրների լուծում custom sections-ում",
-    footer:"Shopify-focused portfolio ներկայացում"
+    skill5:"Performance Optimization",
+    skill6:"Landing Page Strategy",
+    process_title:"Աշխատանքի մոտեցում",
+    step1:"Վերլուծում եմ ապրանքի նպատակն ու հաճախորդի վարքը",
+    step2:"Կառուցում եմ UI կառուցվածք՝ վաճառքի հոսքով",
+    step3:"Օպտիմիզացնում եմ mobile և performance",
+    step4:"Տրամադրում եմ պատրաստ conversion-ready էջ",
+    cta_title:"Պատրաստ ես բարձրացնել քո Shopify վաճառքները?",
+    cta_btn:"Եկեք սկսենք",
+    footer:"Shopify Conversion Portfolio · GitHub Pages"
   },
 
   en:{
-    hero_title:"I build Shopify pages that sell, not just look good",
-    hero_sub:"Shopify specialist · Liquid · UI/UX · Conversion-focused development",
-    btn_projects:"Projects",
+    hero_title:"I build Shopify pages that actually sell",
+    hero_sub:"Shopify specialist focused on conversion UI, Liquid development and high-performing landing pages.",
+    btn_projects:"View Work",
     btn_contact:"Contact",
+    about_title:"What I do",
+    about_text:"I focus on Shopify experiences where every page is designed to generate sales and improve conversion.",
     skills_title:"Skills",
     skill1:"Shopify Theme Development",
-    skill2:"Liquid Custom Sections",
-    skill3:"Conversion UI Design",
+    skill2:"Liquid / Custom Sections",
+    skill3:"Conversion UI Architecture",
     skill4:"Mobile Optimization",
-    case_title:"Mini Case Study",
-    case1:"Shopify product page optimization → improved user flow",
-    case2:"Fixed mobile interaction issues in custom sections",
-    footer:"Shopify-focused portfolio showcase"
+    skill5:"Performance Optimization",
+    skill6:"Landing Page Strategy",
+    process_title:"My Process",
+    step1:"Analyze product goals and user behavior",
+    step2:"Build conversion-focused UI structure",
+    step3:"Optimize for mobile and performance",
+    step4:"Deliver ready-to-use Shopify page",
+    cta_title:"Ready to increase your Shopify sales?",
+    cta_btn:"Let’s Start",
+    footer:"Shopify Conversion Portfolio · GitHub Pages"
   },
 
   ru:{
-    hero_title:"Я создаю Shopify страницы, которые продают, а не просто выглядят красиво",
-    hero_sub:"Shopify специалист · Liquid · UI/UX · Конверсионная разработка",
+    hero_title:"Я создаю Shopify страницы, которые реально продают",
+    hero_sub:"Shopify специалист по конверсионному UI, Liquid разработке и высокоэффективным лендингам.",
     btn_projects:"Проекты",
     btn_contact:"Контакт",
+    about_title:"Что я делаю",
+    about_text:"Я создаю Shopify решения, где каждая страница направлена на увеличение продаж.",
     skills_title:"Навыки",
-    skill1:"Разработка Shopify тем",
-    skill2:"Кастомные Liquid секции",
-    skill3:"Конверсионный UI дизайн",
+    skill1:"Shopify разработка тем",
+    skill2:"Liquid / кастомные секции",
+    skill3:"Конверсионная UI архитектура",
     skill4:"Мобильная оптимизация",
-    case_title:"Мини кейс",
-    case1:"Оптимизация product page → улучшение пользовательского потока",
-    case2:"Исправление мобильных взаимодействий в секциях",
-    footer:"Портфолио Shopify разработчика"
+    skill5:"Оптимизация скорости",
+    skill6:"Стратегия лендингов",
+    process_title:"Процесс работы",
+    step1:"Анализ продукта и поведения пользователя",
+    step2:"Создание структуры с фокусом на конверсию",
+    step3:"Оптимизация под mobile и скорость",
+    step4:"Готовая Shopify страница",
+    cta_title:"Готов увеличить продажи Shopify?",
+    cta_btn:"Начать",
+    footer:"Shopify Conversion Portfolio · GitHub Pages"
   }
 };
 
