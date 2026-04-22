@@ -46,22 +46,13 @@ header{
   font-size:13px;
 }
 
-/* LANGUAGE SWITCH */
-.lang-switch{
-  display:flex;
-  gap:8px;
-}
-
 .lang-switch button{
   background:none;
   border:none;
+  margin-left:8px;
   cursor:pointer;
   font-size:12px;
   color:var(--muted);
-}
-
-.lang-switch button:hover{
-  color:var(--accent);
 }
 
 /* HERO */
@@ -73,10 +64,6 @@ header{
   display:flex;
   gap:30px;
   align-items:center;
-}
-
-.hero-text{
-  flex:1;
 }
 
 .hero-text h1{
@@ -96,11 +83,9 @@ header{
   padding:12px 16px;
   border-radius:10px;
   text-decoration:none;
-  font-size:13px;
 }
 
 .hero-visual{
-  flex:1;
   position:relative;
 }
 
@@ -117,61 +102,39 @@ header{
   opacity:0.1;
 }
 
-/* GRID */
-.grid{
+/* SERVICES */
+.services-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
-  padding:20px 5%;
 }
 
 .card{
   background:#fff;
   border:1px solid var(--border);
   border-radius:12px;
-  padding:14px;
+  padding:12px;
   font-size:13px;
   color:var(--muted);
 }
 
-/* SECTION */
 .section{
-  padding:10px 5%;
+  padding:14px 5%;
 }
 
 .highlight{
   background:#fff;
   border:1px solid var(--border);
-  padding:14px;
+  padding:12px;
   border-radius:12px;
   font-size:13px;
   color:var(--muted);
-}
-
-/* RESULTS */
-.results{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  padding:10px 5%;
-}
-
-.result-box{
-  background:#fff;
-  border-left:4px solid var(--accent);
-  padding:12px;
-  border-radius:10px;
-  font-size:13px;
 }
 
 /* FINAL */
 .final{
   text-align:center;
   padding:30px 5%;
-}
-
-.final h2{
-  margin-bottom:10px;
 }
 
 .final a{
@@ -230,7 +193,7 @@ header{
       <p id="hero_text"></p>
 
       <div class="cta">
-        <a id="cta_btn" href="https://wa.me/0000000000"></a>
+        <a id="cta_btn" href="https://wa.me/0000"></a>
       </div>
     </div>
 
@@ -242,79 +205,84 @@ header{
   </div>
 </section>
 
-<!-- VALUE -->
-<section class="grid">
-  <div class="card" id="value1"></div>
-  <div class="card" id="value2"></div>
-</section>
-
-<!-- STRATEGY -->
+<!-- SERVICES -->
 <section class="section">
-  <div class="highlight" id="strategy"></div>
-</section>
+  <h2 id="services_title"></h2>
 
-<!-- RESULTS -->
-<section class="results">
-  <div class="result-box" id="r1"></div>
-  <div class="result-box" id="r2"></div>
-  <div class="result-box" id="r3"></div>
-  <div class="result-box" id="r4"></div>
+  <div class="highlight" id="services_intro"></div>
+
+  <div class="services-grid" style="margin-top:10px;">
+    <div class="card" id="s1"></div>
+    <div class="card" id="s2"></div>
+    <div class="card" id="s3"></div>
+    <div class="card" id="s4"></div>
+    <div class="card" id="s5"></div>
+  </div>
 </section>
 
 <!-- FINAL -->
 <section class="final">
   <h2 id="final_title"></h2>
-  <a id="final_cta" href="https://wa.me/0000000000"></a>
+  <a id="final_cta" href="https://wa.me/0000"></a>
 </section>
 
 </div>
 
-<a class="whatsapp-float" href="https://wa.me/0000000000">💬</a>
+<a class="whatsapp-float" href="https://wa.me/0000">💬</a>
 
 <script>
 const content = {
 
 hy:{
-  hero_title:"Քո Shopify խանութը կարող է դառնալ իրական վաճառքի համակարգ",
-  hero_text:"Ես ստեղծում եմ վաճառք ապահովող Shopify էջեր և կառուցվածքներ, որոնք ոչ միայն գեղեցիկ են, այլ նաև բերում են իրական արդյունք։",
+  hero_title:"Քո բիզնեսը կարող է սկսել իրական օնլայն վաճառքներ",
+  hero_text:"Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։",
   cta:"Գրել WhatsApp-ում",
-  value1:"Shopify կայքը պարզապես դիզայն չէ — դա վաճառքի համակարգ է։",
-  value2:"Շատ խանութներ չեն վաճառում, քանի որ չունեն ճիշտ կառուցվածք։",
-  strategy:"Ես կառուցում եմ ամբողջական Shopify էկոհամակարգ՝ landing էջեր, UX կառուցվածք և վաճառքի հոսքեր։",
-  r1:"✔ Բարձր կոնվերսիա",
-  r2:"✔ Mobile-first փորձ",
-  r3:"✔ Օպտիմիզացված վաճառքի հոսք",
-  r4:"✔ Վաճառք ապահովող էջեր",
+
+  services_title:"Իմ կողմից տրամադրվող ծառայություններ",
+  services_intro:"UI/UX դիզայն, վեբ կայքերի կառուցում և վաճառքի համակարգերի ստեղծում՝ Success Academy-ում ստացած մասնագիտական պատրաստվածությամբ։",
+
+  s1:"Վաճառք ապահովող landing էջերի կառուցում",
+  s2:"Օնլայն խանութի կառուցում և կարգավորում (Shopify store setup)",
+  s3:"Բոլոր սարքերին հարմարեցված կայքերի ստեղծում (Responsive Design)",
+  s4:"Կայքերի դիզայն և վաճառքի օպտիմիզացում (Redesign & optimization)",
+  s5:"Հավելվածների ինտեգրում (Apps & Tools)",
+
   final_title:"Եկ ստեղծենք էջ, որը աշխատում է քո փոխարեն",
   final_cta:"Սկսել հիմա"
 },
 
 en:{
-  hero_title:"Turn your Shopify store into a real sales system",
-  hero_text:"I build conversion-focused Shopify pages and structures that not only look good, but actually drive results.",
+  hero_title:"Your business can start generating real online sales",
+  hero_text:"I help small businesses create landing pages that attract real customers.",
   cta:"Message on WhatsApp",
-  value1:"A Shopify store is not just design — it's a sales system.",
-  value2:"Most stores don’t sell because they lack proper structure.",
-  strategy:"I build complete Shopify ecosystems: landing pages, UX structure, and conversion flows.",
-  r1:"✔ Higher conversion rates",
-  r2:"✔ Mobile-first experience",
-  r3:"✔ Optimized sales flow",
-  r4:"✔ Sales-driven pages",
+
+  services_title:"Services I Offer",
+  services_intro:"UI/UX design, website development, and sales system creation based on professional training at Success Academy.",
+
+  s1:"Conversion-focused landing page development",
+  s2:"Shopify store setup and configuration",
+  s3:"Responsive website development for all devices",
+  s4:"Website redesign and conversion optimization",
+  s5:"App and tool integrations",
+
   final_title:"Let’s build a page that works for you",
   final_cta:"Start now"
 },
 
 ru:{
-  hero_title:"Превратите ваш Shopify магазин в систему продаж",
-  hero_text:"Я создаю Shopify страницы и структуры, которые не просто выглядят красиво, а реально приносят результат.",
+  hero_title:"Ваш бизнес может начать реальные онлайн-продажи",
+  hero_text:"Я помогаю малому бизнесу создавать страницы, которые привлекают реальных клиентов.",
   cta:"Написать в WhatsApp",
-  value1:"Shopify сайт — это не просто дизайн, это система продаж.",
-  value2:"Многие магазины не продают из-за отсутствия структуры.",
-  strategy:"Я создаю полноценные Shopify системы: лендинги, UX-структуру и воронки продаж.",
-  r1:"✔ Повышение конверсии",
-  r2:"✔ Mobile-first подход",
-  r3:"✔ Оптимизированная воронка продаж",
-  r4:"✔ Продающие страницы",
+
+  services_title:"Предоставляемые услуги",
+  services_intro:"UI/UX дизайн, разработка сайтов и создание систем продаж на основе профессиональной подготовки в Success Academy.",
+
+  s1:"Создание продающих лендингов",
+  s2:"Настройка и запуск Shopify-магазина",
+  s3:"Адаптивная разработка сайтов для всех устройств",
+  s4:"Редизайн сайта и оптимизация конверсии",
+  s5:"Интеграция приложений и сервисов",
+
   final_title:"Давайте создадим страницу, которая работает за вас",
   final_cta:"Начать сейчас"
 }
@@ -325,13 +293,16 @@ function setLang(lang){
   document.getElementById("hero_title").innerText = content[lang].hero_title;
   document.getElementById("hero_text").innerText = content[lang].hero_text;
   document.getElementById("cta_btn").innerText = content[lang].cta;
-  document.getElementById("value1").innerText = content[lang].value1;
-  document.getElementById("value2").innerText = content[lang].value2;
-  document.getElementById("strategy").innerText = content[lang].strategy;
-  document.getElementById("r1").innerText = content[lang].r1;
-  document.getElementById("r2").innerText = content[lang].r2;
-  document.getElementById("r3").innerText = content[lang].r3;
-  document.getElementById("r4").innerText = content[lang].r4;
+
+  document.getElementById("services_title").innerText = content[lang].services_title;
+  document.getElementById("services_intro").innerText = content[lang].services_intro;
+
+  document.getElementById("s1").innerText = content[lang].s1;
+  document.getElementById("s2").innerText = content[lang].s2;
+  document.getElementById("s3").innerText = content[lang].s3;
+  document.getElementById("s4").innerText = content[lang].s4;
+  document.getElementById("s5").innerText = content[lang].s5;
+
   document.getElementById("final_title").innerText = content[lang].final_title;
   document.getElementById("final_cta").innerText = content[lang].final_cta;
 }
