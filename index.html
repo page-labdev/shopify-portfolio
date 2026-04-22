@@ -42,7 +42,6 @@ header{
   border-bottom:1px solid var(--border);
 }
 
-/* LOGO */
 .logo{
   display:flex;
   align-items:center;
@@ -51,13 +50,11 @@ header{
   font-size:13px;
 }
 
-/* SHOPIFY ICON */
 .shopify-icon{
   width:18px;
   height:18px;
 }
 
-/* LANGUAGE SWITCH */
 .lang-switch button{
   margin-left:6px;
   padding:6px 10px;
@@ -77,10 +74,6 @@ header{
   display:flex;
   gap:30px;
   align-items:center;
-}
-
-.hero-text{
-  flex:1;
 }
 
 .hero-text h1{
@@ -141,7 +134,7 @@ header{
   margin-top:8px;
 }
 
-/* FINAL CTA */
+/* FINAL */
 .final{
   text-align:center;
   padding:20px 5%;
@@ -157,7 +150,7 @@ header{
   border-radius:8px;
 }
 
-/* FLOAT BUTTON */
+/* FLOAT */
 .whatsapp-float{
   position:fixed;
   bottom:18px;
@@ -188,20 +181,16 @@ header{
 <div class="container">
 
 <header>
-
-  <!-- LOGO + SHOPIFY ICON -->
   <div class="logo">
-    <img class="shopify-icon" src="https://cdn.worldvectorlogo.com/logos/shopify.svg" alt="Shopify">
+    <img class="shopify-icon" src="https://cdn.worldvectorlogo.com/logos/shopify.svg">
     BUSINESS GROWTH
   </div>
 
-  <!-- LANGUAGE SWITCH -->
   <div class="lang-switch">
     <button onclick="setLang('hy')">AM</button>
     <button onclick="setLang('en')">EN</button>
     <button onclick="setLang('ru')">RU</button>
   </div>
-
 </header>
 
 <!-- HERO -->
@@ -213,7 +202,6 @@ header{
 
       <p data-i18n="hero_text">
         Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։
-        Սկսիր հիմա՝ առանց բարդ գործընթացների։
       </p>
 
       <div class="cta">
@@ -226,40 +214,62 @@ header{
 
 <!-- PROBLEM -->
 <section class="section">
-  <div class="box" data-i18n="problem"></div>
+  <div class="box" data-i18n="problem">
+    Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ կառուցված համակարգ, որը կօգնի դրանք արդյունավետ վաճառել օնլայն հարթակներում։ Սա է պատճառը, որ վաճառքները մնում են սահմանափակ, նույնիսկ երբ կա պահանջարկ։
+  </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section">
-  <h2 data-i18n="services_title"></h2>
+  <h2 data-i18n="services_title">Տամադրվող ծառայություններ</h2>
 
-  <div class="box" data-i18n="services_text"></div>
+  <div class="box">
+    UI/UX դիզայն, վեբ կայքերի կառուցում և վաճառքի համակարգերի ստեղծում՝ Success Academy-ում ստացած մասնագիտական պատրաստվածությամբ։
+  </div>
+
+  <div class="services-grid" style="margin-top:10px;">
+    <div class="box">Վաճառք ապահովող landing էջերի կառուցում</div>
+    <div class="box">Օնլայն խանութի կառուցում և կարգավորում (Shopify store setup)</div>
+    <div class="box">Բոլոր սարքերին հարմարեցված կայքերի ստեղծում (Responsive Design)</div>
+    <div class="box">Կայքերի դիզայն և վաճառքի օպտիմիզացում (Redesign & optimization)</div>
+    <div class="box">Հավելվածների ինտեգրում Apps & Tools</div>
+  </div>
 </section>
 
 <!-- SKILLS -->
 <section class="section">
-  <h2 data-i18n="skills_title"></h2>
+  <h2 data-i18n="skills_title">Կիրառվող հմտություններ</h2>
 
   <div class="skills-grid">
-    <div class="box">Shopify Development</div>
-    <div class="box">UI/UX Design</div>
-    <div class="box">HTML / CSS / Liquid</div>
-    <div class="box">Landing Pages</div>
+
+    <div class="box">Shopify Development & Theme Customization</div>
+    <div class="box">Shopify Templates & Website Redesign</div>
+
+    <div class="box">HTML5 / CSS3 / Liquid (Shopify Coding)</div>
+    <div class="box">Landing Page Design & Conversion Optimization</div>
+
+    <div class="box">Product Listings & Store Structuring</div>
+    <div class="box">Microsoft Excel & Data Entry Systems</div>
+
   </div>
 </section>
 
 <!-- GRAPH -->
 <section class="section">
-  <h2 data-i18n="growth_title"></h2>
+  <h2 data-i18n="growth_title">Աճի պատկերացում</h2>
 
   <div class="graph">
     <img src="https://t4.ftcdn.net/jpg/09/00/62/97/360_F_900629727_nLFzv8NdpbQEefppwbBUbpqDBBsl6uWB.jpg">
   </div>
+
+  <div class="box">
+    Ճիշտ կառուցված էջը կարող է զգալիորեն բարձրացնել քո վաճառքները առանց լրացուցիչ գովազդի։
+  </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- FINAL -->
 <section class="final">
-  <h2 data-i18n="final_title"></h2>
+  <h2 data-i18n="final_title">Եկ սկսենք ստեղծել էջ, որը աշխատում է քո փոխարեն</h2>
 
   <a href="#" data-i18n="cta">Գրել WhatsApp-ում</a>
 </section>
@@ -272,44 +282,56 @@ header{
 const translations = {
   hy:{
     hero_title:"Քո բիզնեսը կարող է սկսել իրական օնլայն վաճառքներ",
-    hero_text:"Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։ Սկսիր հիմա՝ առանց բարդ գործընթացների։",
+    hero_text:"Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։",
     cta:"Գրել WhatsApp-ում",
     problem:"Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ համակարգ վաճառքի համար։",
     services_title:"Տամադրվող ծառայություններ",
-    services_text:"UI/UX դիզայն, վեբ կայքերի կառուցում և վաճառքի համակարգերի ստեղծում։",
     skills_title:"Կիրառվող հմտություններ",
     growth_title:"Աճի պատկերացում",
     final_title:"Եկ սկսենք ստեղծել էջ, որը աշխատում է քո փոխարեն"
   },
+en:{
+  hero_title:"Turn your business into a system that generates real online sales",
+  
+  hero_text:"I design high-converting landing pages and Shopify systems that turn visitors into real customers — not just traffic.",
 
-  en:{
-    hero_title:"Your business can start real online sales",
-    hero_text:"I help small businesses build landing pages that bring real customers. Start now without complexity.",
-    cta:"Message on WhatsApp",
-    problem:"Many businesses have good products but lack a system to sell them effectively.",
-    services_title:"Services",
-    services_text:"UI/UX design, website development and sales system creation.",
-    skills_title:"Skills",
-    growth_title:"Growth overview",
-    final_title:"Let’s build a page that works for you"
+  cta:"Contact on WhatsApp",
+
+  problem:"Many businesses have strong products, but lack a structured system to convert visitors into paying customers.",
+
+  services_title:"Services",
+
+  skills_title:"Core Skills",
+
+  growth_title:"Performance Overview",
+
+  final_title:"Let’s build a page that actually drives results for your business"
+}
   },
+ ru:{
+  hero_title:"Ваш бизнес может превратиться в систему реальных онлайн-продаж",
 
-  ru:{
-    hero_title:"Ваш бизнес может начать реальные онлайн-продажи",
-    hero_text:"Я помогаю малому бизнесу создавать продающие страницы, которые приводят клиентов.",
-    cta:"Написать в WhatsApp",
-    problem:"У многих бизнесов есть хорошие продукты, но нет системы продаж.",
-    services_title:"Услуги",
-    services_text:"UI/UX дизайн, разработка сайтов и систем продаж.",
-    skills_title:"Навыки",
-    growth_title:"Рост",
-    final_title:"Давайте создадим страницу, которая работает за вас"
-  }
-};
+  hero_text:"Я создаю продающие лендинги и Shopify-решения, которые превращают посетителей в клиентов.",
+
+  cta:"Связаться в WhatsApp",
+
+  problem:"У многих бизнесов есть сильные продукты, но нет системы, которая превращает трафик в реальные продажи.",
+
+  services_title:"Услуги",
+
+  skills_title:"Навыки",
+
+  growth_title:"Результаты и рост",
+
+  final_title:"Давайте создадим страницу, которая реально приносит продажи вашему бизнесу"
+}
 
 function setLang(lang){
   document.querySelectorAll("[data-i18n]").forEach(el=>{
-    el.innerText = translations[lang][el.dataset.i18n];
+    const key = el.dataset.i18n;
+    if(translations[lang][key]){
+      el.innerText = translations[lang][key];
+    }
   });
 }
 </script>
