@@ -119,13 +119,7 @@ header{
   border-radius:12px;
   font-size:13px;
   color:var(--muted);
-}
-
-/* GRAPH */
-.graph img{
-  width:100%;
-  border-radius:12px;
-  margin-top:10px;
+  line-height:1.5;
 }
 
 /* SERVICES */
@@ -133,6 +127,13 @@ header{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
+  margin-top:10px;
+}
+
+/* GRAPH */
+.graph img{
+  width:100%;
+  border-radius:12px;
   margin-top:10px;
 }
 
@@ -165,6 +166,45 @@ header{
   color:#fff;
   text-decoration:none;
   font-size:22px;
+}
+
+/* ========================= */
+/* MOBILE FIX (IMPORTANT) */
+/* ========================= */
+@media (max-width: 768px){
+
+  .hero-grid{
+    flex-direction:column;
+    text-align:center;
+    gap:16px;
+  }
+
+  .grid,
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    font-size:13px;
+    line-height:1.5;
+    word-break:break-word;
+  }
+
+  .section{
+    padding:12px 4%;
+  }
+
+  .hero-text h1{
+    font-size:22px;
+  }
+
+  .hero-text p{
+    font-size:13px;
+  }
+
+  .highlight{
+    font-size:12.5px;
+  }
 }
 </style>
 </head>
@@ -218,11 +258,32 @@ header{
   <div class="highlight" id="services_intro"></div>
 
   <div class="services-grid">
-    <div class="card" id="s1"></div>
-    <div class="card" id="s2"></div>
-    <div class="card" id="s3"></div>
-    <div class="card" id="s4"></div>
-    <div class="card" id="s5"></div>
+
+    <div class="card">
+      ✔ UI/UX դիզայն<br>
+      ✔ վեբ կայքերի կառուցում և վաճառքի համակարգերի ստեղծում՝ Success Academy-ում ստացած մասնագիտական պատրաստվածությամբ։
+    </div>
+
+    <div class="card">
+      ✔ Վաճառք ապահովող landing էջերի կառուցում
+    </div>
+
+    <div class="card">
+      ✔ Shopify store setup և կարգավորում
+    </div>
+
+    <div class="card">
+      ✔ Responsive կայքերի կառուցում
+    </div>
+
+    <div class="card">
+      ✔ Redesign & optimization
+    </div>
+
+    <div class="card">
+      ✔ Apps & Tools ինտեգրում
+    </div>
+
   </div>
 </section>
 
@@ -249,8 +310,7 @@ header{
 
 <script>
 
-/* 🔥 ONLY CHANGE NUMBER HERE */
-const WHATSAPP_NUMBER = "0000";
+const WHATSAPP_NUMBER = "37494450854";
 
 function waLink(text){
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
@@ -268,12 +328,6 @@ hy:{
 
   services_title:"Իմ կողմից տրամադրվող ծառայություններ",
   services_intro:"UI/UX դիզայն, վեբ կայքերի կառուցում և վաճառքի համակարգերի ստեղծում՝ Success Academy-ում ստացած մասնագիտական պատրաստվածությամբ։",
-
-  s1:"Վաճառք ապահովող landing էջերի կառուցում",
-  s2:"Shopify store setup և կարգավորում",
-  s3:"Responsive կայքերի կառուցում",
-  s4:"Redesign & optimization",
-  s5:"Apps & Tools ինտեգրում",
 
   growth_title:"Աճի պատկերացում",
   growth_text:"Ճիշտ կառուցված վաճառքի էջը կարող է զգալիորեն ավելացնել քո վաճառքները՝ առանց լրացուցիչ գովազդի։",
@@ -293,12 +347,6 @@ en:{
   services_title:"Services I provide",
   services_intro:"UI/UX design, website development, and sales system creation.",
 
-  s1:"High-converting landing pages",
-  s2:"Shopify store setup",
-  s3:"Responsive websites",
-  s4:"Redesign & optimization",
-  s5:"Apps & tools integration",
-
   growth_title:"Growth overview",
   growth_text:"A properly structured sales page increases conversions without extra ads.",
 
@@ -317,12 +365,6 @@ ru:{
   services_title:"Предоставляемые услуги",
   services_intro:"UI/UX дизайн, разработка сайтов и создание систем продаж.",
 
-  s1:"Продающие лендинги",
-  s2:"Настройка Shopify магазина",
-  s3:"Адаптивные сайты",
-  s4:"Редизайн и оптимизация",
-  s5:"Интеграция приложений",
-
   growth_title:"Рост",
   growth_text:"Хорошо структурированная страница увеличивает продажи без рекламы.",
 
@@ -334,32 +376,28 @@ ru:{
 
 function setLang(lang){
 
-  document.getElementById("hero_title").innerText = content[lang].hero_title;
-  document.getElementById("hero_text").innerText = content[lang].hero_text;
+  const d = content[lang];
 
-  document.getElementById("cta_btn").innerText = content[lang].cta;
-  document.getElementById("cta_btn").href = waLink(content[lang].cta);
+  document.getElementById("hero_title").innerText = d.hero_title;
+  document.getElementById("hero_text").innerText = d.hero_text;
+
+  document.getElementById("cta_btn").innerText = d.cta;
+  document.getElementById("cta_btn").href = waLink(d.cta);
 
   document.getElementById("wa_float").href = waLink("Hello");
 
-  document.getElementById("value_1").innerText = content[lang].value_1;
-  document.getElementById("value_2").innerText = content[lang].value_2;
+  document.getElementById("value_1").innerText = d.value_1;
+  document.getElementById("value_2").innerText = d.value_2;
 
-  document.getElementById("services_title").innerText = content[lang].services_title;
-  document.getElementById("services_intro").innerText = content[lang].services_intro;
+  document.getElementById("services_title").innerText = d.services_title;
+  document.getElementById("services_intro").innerText = d.services_intro;
 
-  document.getElementById("s1").innerText = content[lang].s1;
-  document.getElementById("s2").innerText = content[lang].s2;
-  document.getElementById("s3").innerText = content[lang].s3;
-  document.getElementById("s4").innerText = content[lang].s4;
-  document.getElementById("s5").innerText = content[lang].s5;
+  document.getElementById("growth_title").innerText = d.growth_title;
+  document.getElementById("growth_text").innerText = d.growth_text;
 
-  document.getElementById("growth_title").innerText = content[lang].growth_title;
-  document.getElementById("growth_text").innerText = content[lang].growth_text;
-
-  document.getElementById("final_title").innerText = content[lang].final_title;
-  document.getElementById("final_cta").innerText = content[lang].final_cta;
-  document.getElementById("final_cta").href = waLink(content[lang].final_cta);
+  document.getElementById("final_title").innerText = d.final_title;
+  document.getElementById("final_cta").innerText = d.final_cta;
+  document.getElementById("final_cta").href = waLink(d.final_cta);
 }
 
 setLang('hy');
