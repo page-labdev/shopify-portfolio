@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Business Growth - Landing</title>
+<title></title>
 
 <style>
 :root{
-  --bg:#f6f3ef;
+  --bg:#fbf7f2;
   --text:#1d1d1d;
   --muted:#6a6a6a;
   --accent:#2f6f5e;
@@ -36,192 +36,81 @@ header{
   border-bottom:1px solid var(--border);
 }
 
-.logo{
-  font-weight:800;
-  font-size:13px;
-}
-
-/* LANGUAGE SWITCH */
-.lang-switch{
-  font-size:12px;
-}
-
-.lang-switch button{
-  border:none;
-  background:none;
-  cursor:pointer;
-  margin-left:8px;
-  color:var(--muted);
-}
-
 /* HERO */
 .hero{
-  padding:40px 5% 20px;
+  padding:22px 5%;
 }
 
-.hero-grid{
-  display:flex;
-  gap:50px;
-  max-width:1100px;
-  margin:0 auto;
-  align-items:center;
-}
-
-/* TEXT */
-.hero-text{
-  flex:1;
-}
-
-.hero-text h1{
-  font-size:34px;
-  line-height:1.1;
+.hero img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:14px;
   margin-bottom:12px;
 }
 
-.hero-text p{
-  font-size:15px;
-  color:var(--muted);
-  margin-bottom:18px;
+/* SECTIONS */
+.section{
+  padding:22px 5%;
 }
 
-/* CTA */
-.cta a{
-  display:inline-block;
-  background:var(--accent);
-  color:#fff;
-  text-decoration:none;
-  padding:12px 16px;
-  border-radius:10px;
-  font-size:13px;
+.box{
+  background:#fff;
+  border:1px solid var(--border);
+  padding:14px;
+  border-radius:14px;
 }
 
-/* VISUAL */
-.hero-visual{
-  flex:1;
-  position:relative;
-}
-
-.hero-main{
+/* GRAPH */
+.graph img{
   width:100%;
-  border-radius:16px;
-  position:relative;
-  z-index:2;
+  height:160px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-top:10px;
 }
 
-/* GRAPHIC (FIXED IMAGE YOU SENT) */
-.hero-graphic{
-  position:absolute;
-  top:-30px;
-  left:-40px;
-  width:120%;
-  opacity:0.08;
-  z-index:1;
-  pointer-events:none;
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .hero-grid{
-    flex-direction:column;
-    text-align:center;
-  }
+/* FLOAT BUTTON */
+.whatsapp-float{
+  position:fixed;
+  bottom:18px;
+  right:18px;
+  background:#25D366;
+  color:#fff;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">BUSINESS GROWTH</div>
+<header></header>
 
-  <!-- LANGUAGE SWITCH -->
-  <div class="lang-switch">
-    <button onclick="setLang('hy')">HY</button>
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('ru')">RU</button>
-  </div>
-</header>
-
-<!-- HERO -->
+<!-- HERO IMAGE ONLY -->
 <section class="hero">
-  <div class="hero-grid">
+  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"/>
+</section>
 
-    <!-- TEXT (UNCHANGED CONTENT STRUCTURE) -->
-    <div class="hero-text">
-
-      <!-- ARMENIAN (default) -->
-      <div class="lang hy">
-
-        <h1>Քո բիզնեսը կարող է սկսել իրական օնլայն վաճառքներ</h1>
-
-        <p>
-          Ես կառուցում եմ վաճառքի համակարգեր և responsive կայքեր (mobile + desktop),
-          որոնք օգնում են բիզնեսներին ստանալ իրական հաճախորդներ WhatsApp-ից և կայքից։
-        </p>
-
-        <div class="cta">
-          <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20վաճառքի%20էջ%20իմ%20բիզնեսի%20համար">
-            Գրել WhatsApp-ում
-          </a>
-        </div>
-
-      </div>
-
-      <!-- ENGLISH -->
-      <div class="lang en" style="display:none;">
-        <h1>Your business can start real online sales</h1>
-        <p>
-          I build sales systems and responsive websites (mobile + desktop)
-          that help businesses get real customers from WhatsApp and websites.
-        </p>
-        <div class="cta">
-          <a href="#">Message on WhatsApp</a>
-        </div>
-      </div>
-
-      <!-- RUSSIAN -->
-      <div class="lang ru" style="display:none;">
-        <h1>Ваш бизнес может начать реальные онлайн продажи</h1>
-        <p>
-          Я создаю системы продаж и адаптивные сайты (mobile + desktop),
-          которые помогают получать клиентов через WhatsApp и сайт.
-        </p>
-        <div class="cta">
-          <a href="#">Написать в WhatsApp</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- VISUAL -->
-    <div class="hero-visual">
-
-      <!-- HERO IMAGE (your correct one) -->
-      <img class="hero-main"
-           src="https://www.e-ways.com.tw/upload/article/article_479.jpg"
-           alt="Hero">
-
-      <!-- GRAPHIC IMAGE (your correct ftcdn) -->
-      <div class="hero-graphic">
-        <img src="https://t4.ftcdn.net/jpg/09/00/62/97/360_F_900629727_nLFzv8NdpbQEefppwbBUbpqDBBsl6uWB.jpg"
-             alt="">
-      </div>
-
-    </div>
-
+<!-- GRAPH IMAGE -->
+<section class="section">
+  <div class="graph">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"/>
   </div>
 </section>
 
-<script>
-function setLang(lang){
-  document.querySelectorAll('.lang').forEach(el => {
-    el.style.display = 'none';
-  });
-  document.querySelectorAll('.' + lang).forEach(el => {
-    el.style.display = 'block';
-  });
-}
-</script>
+<!-- FLOAT BUTTON -->
+<a class="whatsapp-float" href="#">
+  💬
+</a>
+
+<footer></footer>
 
 </body>
 </html>
