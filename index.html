@@ -73,4 +73,322 @@ header{
 
 .hero-text p{
   font-size:14px;
-  color:var(--mut
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+.cta a{
+  background:var(--accent);
+  color:#fff;
+  padding:12px 16px;
+  border-radius:10px;
+  text-decoration:none;
+}
+
+/* IMAGE */
+.hero-visual img{
+  width:100%;
+  border-radius:14px;
+}
+
+/* SECTION */
+.section{
+  padding:14px 5%;
+}
+
+.highlight{
+  background:#fff;
+  border:1px solid var(--border);
+  padding:12px;
+  border-radius:12px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid var(--border);
+  padding:12px;
+  border-radius:12px;
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+/* SERVICES */
+.services-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:10px;
+}
+
+/* GRAPH */
+.graph img{
+  width:100%;
+  border-radius:12px;
+  margin-top:10px;
+}
+
+/* FINAL FIXED SPACING */
+.final{
+  text-align:center;
+  padding:40px 5%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+}
+
+.final h2{
+  margin:0;
+  font-size:20px;
+  line-height:1.3;
+}
+
+.final a{
+  background:var(--accent);
+  color:#fff;
+  padding:12px 18px;
+  border-radius:10px;
+  text-decoration:none;
+}
+
+/* FLOAT */
+.whatsapp-float{
+  position:fixed;
+  bottom:18px;
+  right:18px;
+  background:#25D366;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  text-decoration:none;
+  font-size:22px;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+  .hero-grid{
+    flex-direction:column;
+    text-align:center;
+    gap:16px;
+  }
+
+  .grid,
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    font-size:13px;
+    line-height:1.5;
+    word-break:break-word;
+  }
+
+  .section{
+    padding:12px 4%;
+  }
+
+  .hero-text h1{
+    font-size:22px;
+  }
+
+  .hero-text p{
+    font-size:13px;
+  }
+
+  .highlight{
+    font-size:12.5px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <div class="logo">SHOPIFY GROWTH STUDIO</div>
+
+  <div class="lang-switch">
+    <button onclick="setLang('hy')">HY</button>
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('ru')">RU</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+
+    <div class="hero-text">
+      <h1 id="hero_title"></h1>
+      <p id="hero_text"></p>
+
+      <div class="cta">
+        <a id="cta_btn" href="" target="_blank"></a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <img src="https://www.e-ways.com.tw/upload/article/article_479.jpg">
+    </div>
+
+  </div>
+</section>
+
+<!-- VALUE -->
+<section class="section">
+  <div class="grid">
+    <div class="card" id="value_1"></div>
+    <div class="card" id="value_2"></div>
+  </div>
+</section>
+
+<!-- SERVICES (ARMENIAN STATIC + EN/RU DYNAMIC) -->
+<section class="section">
+  <h2 id="services_title"></h2>
+
+  <div class="highlight" id="services_intro"></div>
+
+  <div class="services-grid">
+
+    <!-- ARMENIAN STATIC VERSION -->
+    <div class="card">✔ Վաճառք ապահովող landing էջերի կառուցում</div>
+    <div class="card">✔ Օնլայն խանութի կառուցում և կարգավորումներ (Shopify store setup)</div>
+    <div class="card">✔ Բոլոր սարքերին հարմարեցված կայքերի ստեղծում (Responsive Design)</div>
+    <div class="card">✔ Կայքերի դիզայն և վաճառքի օպտիմիզացում (Redesign & optimization)</div>
+    <div class="card">✔ Հավելվածների ինտեգրում (Apps & Tools)</div>
+
+  </div>
+</section>
+
+<!-- GROWTH -->
+<section class="section">
+
+  <div class="graph">
+    <img src="https://t4.ftcdn.net/jpg/09/00/62/97/360_F_900629727_nLFzv8NdpbQEefppwbBUbpqDBBsl6uWB.jpg">
+  </div>
+
+  <div class="highlight" id="growth_text"></div>
+
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <h2 id="final_title"></h2>
+  <a id="final_cta" href="" target="_blank"></a>
+</section>
+
+</div>
+
+<a class="whatsapp-float" id="wa_float" href="" target="_blank">💬</a>
+
+<script>
+
+const WHATSAPP_NUMBER = "37494450854";
+
+function waLink(text){
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
+
+const content = {
+
+hy:{
+  hero_title:"Քո բիզնեսը կարող է սկսել իրական օնլայն վաճառքներ",
+  hero_text:"Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։",
+  cta:"Գրել WhatsApp-ում",
+
+  value_1:"Քո վեբ կայքը պարզապես դիզայն չէ — այն վաճառք ապահովող համակարգ է։",
+  value_2:"Շատ կայքեր արդյունավետ չեն աշխատում, որովհետև չունեն կառուցված վաճառքի համակարգ։",
+
+  services_title:"Տրամադրվող ծառայություններ",
+  services_intro:"UI/UX դիզայն, վեբ կայքերի կառուցում և վաճառքի համակարգերի ստեղծում՝ պրոֆեսիոնալ մոտեցմամբ։",
+
+  growth_text:"Ճիշտ կառուցված վաճառքի էջը կարող է զգալիորեն ավելացնել քո վաճառքները՝ առանց լրացուցիչ գովազդի։",
+
+  final_title:"Եկ ստեղծենք էջ, որը աշխատում է քո փոխարեն",
+  final_cta:"Սկսել հիմա"
+},
+
+en:{
+  hero_title:"Turn your website into a real sales system",
+  hero_text:"I help small businesses build landing pages that generate real customers.",
+  cta:"Message on WhatsApp",
+
+  value_1:"Your website is not just design — it is a conversion system.",
+  value_2:"Most websites fail because they are not built for sales.",
+
+  services_title:"Services",
+  services_intro:"Conversion-focused Shopify development and UI/UX design.",
+
+  growth_text:"A properly structured page increases conversions without extra ads.",
+
+  final_title:"Let’s build a website that actually sells",
+  final_cta:"Start now"
+},
+
+ru:{
+  hero_title:"Превратите сайт в систему продаж",
+  hero_text:"Я создаю Shopify-магазины и лендинги, которые приводят клиентов.",
+  cta:"Написать в WhatsApp",
+
+  value_1:"Сайт — это система продаж, а не просто дизайн.",
+  value_2:"Большинство сайтов не работают из-за отсутствия структуры.",
+
+  services_title:"Услуги",
+  services_intro:"Разработка Shopify и UI/UX дизайн с фокусом на продажи.",
+
+  growth_text:"Хорошо построенная страница увеличивает продажи без рекламы.",
+
+  final_title:"Создадим сайт, который продаёт",
+  final_cta:"Начать"
+}
+
+};
+
+function setLang(lang){
+
+  const d = content[lang];
+
+  document.getElementById("hero_title").innerText = d.hero_title || "";
+  document.getElementById("hero_text").innerText = d.hero_text || "";
+
+  document.getElementById("cta_btn").innerText = d.cta || "";
+  document.getElementById("cta_btn").href = waLink(d.cta || "");
+
+  document.getElementById("wa_float").href = waLink("Hello");
+
+  document.getElementById("value_1").innerText = d.value_1 || "";
+  document.getElementById("value_2").innerText = d.value_2 || "";
+
+  document.getElementById("services_title").innerText = d.services_title || "";
+  document.getElementById("services_intro").innerText = d.services_intro || "";
+
+  document.getElementById("growth_text").innerText = d.growth_text || "";
+
+  document.getElementById("final_title").innerText = d.final_title || "";
+  document.getElementById("final_cta").innerText = d.final_cta || "";
+  document.getElementById("final_cta").href = waLink(d.final_cta || "");
+}
+
+setLang('hy');
+
+</script>
+
+</body>
+</html>
