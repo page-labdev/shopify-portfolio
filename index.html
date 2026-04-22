@@ -31,7 +31,7 @@ body{
   margin:0 auto;
 }
 
-/* HEADER FIXED */
+/* HEADER */
 header{
   display:flex;
   justify-content:space-between;
@@ -231,9 +231,7 @@ header{
 <header>
   <div class="logo">
     Nona | Shopify Developer
-    <div>
-      Shopify Landing Pages & Conversion Systems
-    </div>
+    <div>Shopify Landing Pages & Conversion Systems</div>
   </div>
 
   <div class="lang-switch">
@@ -279,11 +277,12 @@ header{
 
   <div class="services-grid">
 
-    <div class="card">✔ Վաճառք ապահովող landing էջերի կառուցում</div>
-    <div class="card">✔ Օնլայն խանութի կառուցում և կարգավորումներ (Shopify store setup)</div>
-    <div class="card">✔ Բոլոր սարքերին հարմարեցված կայքերի ստեղծում (Responsive Design)</div>
-    <div class="card">✔ Կայքերի դիզայն և վաճառքի օպտիմիզացում (Redesign & optimization)</div>
-    <div class="card">✔ Հավելվածների ինտեգրում (Apps & Tools)</div>
+    <!-- HY / EN / RU controlled via JS if needed -->
+    <div class="card" id="s1"></div>
+    <div class="card" id="s2"></div>
+    <div class="card" id="s3"></div>
+    <div class="card" id="s4"></div>
+    <div class="card" id="s5"></div>
 
   </div>
 </section>
@@ -330,6 +329,12 @@ hy:{
   services_title:"Տրամադրվող ծառայություններ",
   services_intro:"UI/UX դիզայն, վեբ կայքերի կառուցում և վաճառքի համակարգերի ստեղծում՝ պրոֆեսիոնալ մոտեցմամբ։",
 
+  s1:"✔ Վաճառք ապահովող landing էջերի կառուցում",
+  s2:"✔ Shopify store setup և կարգավորում",
+  s3:"✔ Responsive կայքերի կառուցում",
+  s4:"✔ Redesign & optimization",
+  s5:"✔ Apps & Tools ինտեգրում",
+
   growth_text:"Ճիշտ կառուցված վաճառքի էջը կարող է զգալիորեն ավելացնել քո վաճառքները՝ առանց լրացուցիչ գովազդի։",
 
   final_title:"Եկ ստեղծենք էջ, որը աշխատում է քո փոխարեն",
@@ -347,6 +352,12 @@ en:{
   services_title:"Services",
   services_intro:"Conversion-focused Shopify development, UX design, and sales system optimization built for real business results.",
 
+  s1:"High-converting landing page development",
+  s2:"Shopify store setup and configuration",
+  s3:"Fully responsive website development",
+  s4:"UI/UX redesign and optimization",
+  s5:"App and tool integrations",
+
   growth_text:"A properly structured landing page can significantly increase conversions without extra advertising.",
 
   final_title:"Let’s build a store that actually sells",
@@ -363,6 +374,12 @@ ru:{
 
   services_title:"Услуги",
   services_intro:"Разработка Shopify, UX-дизайн и оптимизация продаж с фокусом на реальные бизнес-результаты.",
+
+  s1:"Разработка продающих лендингов",
+  s2:"Настройка Shopify-магазина",
+  s3:"Адаптивная разработка сайтов",
+  s4:"Редизайн и оптимизация UX/UI",
+  s5:"Интеграция приложений и инструментов",
 
   growth_text:"Правильно построенная посадочная страница может значительно увеличить конверсии без дополнительной рекламы.",
 
@@ -389,6 +406,12 @@ function setLang(lang){
 
   document.getElementById("services_title").innerText = d.services_title || "";
   document.getElementById("services_intro").innerText = d.services_intro || "";
+
+  document.getElementById("s1").innerText = d.s1 || "";
+  document.getElementById("s2").innerText = d.s2 || "";
+  document.getElementById("s3").innerText = d.s3 || "";
+  document.getElementById("s4").innerText = d.s4 || "";
+  document.getElementById("s5").innerText = d.s5 || "";
 
   document.getElementById("growth_text").innerText = d.growth_text || "";
 
