@@ -1,1 +1,269 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portfolio | Shopify Specialist</title>
 
+<style>
+:root{
+  --bg:#0e0f13;
+  --card:#161824;
+  --text:#ffffff;
+  --muted:#a9b0c3;
+  --accent:#7c5cff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 6%;
+}
+
+.logo{
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.lang button{
+  background:transparent;
+  border:1px solid #2a2d3a;
+  color:var(--text);
+  padding:6px 10px;
+  margin-left:5px;
+  cursor:pointer;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.lang button:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+/* HERO */
+.hero{
+  padding:80px 6% 40px;
+}
+
+.hero h1{
+  font-size:42px;
+  line-height:1.2;
+  max-width:800px;
+}
+
+.hero p{
+  margin-top:15px;
+  color:var(--muted);
+  max-width:600px;
+  font-size:16px;
+}
+
+.cta{
+  margin-top:25px;
+}
+
+.cta button{
+  background:var(--accent);
+  border:none;
+  color:white;
+  padding:12px 18px;
+  margin-right:10px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.cta button:hover{
+  transform:translateY(-2px);
+}
+
+/* SKILLS */
+.section{
+  padding:60px 6%;
+}
+
+.section h2{
+  margin-bottom:20px;
+  font-size:26px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  transition:0.3s;
+  cursor:pointer;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border:1px solid var(--accent);
+}
+
+/* CASE STUDY */
+.case{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.case-box{
+  flex:1;
+  min-width:250px;
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  color:var(--muted);
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">SHOPIFY BUILDER</div>
+
+  <div class="lang">
+    <button onclick="setLang('hy')">AM</button>
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('ru')">RU</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1 data-i18n="hero_title">
+    Ես կառուցում եմ Shopify էջեր, որոնք վաճառում են, ոչ թե պարզապես գեղեցիկ են
+  </h1>
+
+  <p data-i18n="hero_sub">
+    Shopify specialist · Liquid · UI/UX · Conversion-focused development
+  </p>
+
+  <div class="cta">
+    <button data-i18n="btn_projects">Նախագծեր</button>
+    <button data-i18n="btn_contact">Կապ</button>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section">
+  <h2 data-i18n="skills_title">Հմտություններ</h2>
+
+  <div class="grid">
+    <div class="card" data-i18n="skill1">Shopify Theme Development</div>
+    <div class="card" data-i18n="skill2">Liquid Custom Sections</div>
+    <div class="card" data-i18n="skill3">Conversion UI Design</div>
+    <div class="card" data-i18n="skill4">Mobile Optimization</div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="section">
+  <h2 data-i18n="case_title">Փոքր Case Study</h2>
+
+  <div class="case">
+    <div class="case-box" data-i18n="case1">
+      Shopify product page optimization → improved user flow & clarity
+    </div>
+
+    <div class="case-box" data-i18n="case2">
+      Fixed mobile interaction issues in custom sections
+    </div>
+  </div>
+</section>
+
+<footer data-i18n="footer">
+  Designed for Shopify-focused development showcase
+</footer>
+
+<script>
+const translations = {
+  hy:{
+    hero_title:"Ես կառուցում եմ Shopify էջեր, որոնք վաճառում են, ոչ թե պարզապես գեղեցիկ են",
+    hero_sub:"Shopify specialist · Liquid · UI/UX · Conversion-focused development",
+    btn_projects:"Նախագծեր",
+    btn_contact:"Կապ",
+    skills_title:"Հմտություններ",
+    skill1:"Shopify Theme Development",
+    skill2:"Liquid Custom Sections",
+    skill3:"Conversion UI Design",
+    skill4:"Mobile Optimization",
+    case_title:"Փոքր Case Study",
+    case1:"Shopify product page optimization → բարելավված օգտատիրոջ հոսք",
+    case2:"Mobile interaction խնդիրների լուծում custom sections-ում",
+    footer:"Shopify-focused portfolio ներկայացում"
+  },
+
+  en:{
+    hero_title:"I build Shopify pages that sell, not just look good",
+    hero_sub:"Shopify specialist · Liquid · UI/UX · Conversion-focused development",
+    btn_projects:"Projects",
+    btn_contact:"Contact",
+    skills_title:"Skills",
+    skill1:"Shopify Theme Development",
+    skill2:"Liquid Custom Sections",
+    skill3:"Conversion UI Design",
+    skill4:"Mobile Optimization",
+    case_title:"Mini Case Study",
+    case1:"Shopify product page optimization → improved user flow",
+    case2:"Fixed mobile interaction issues in custom sections",
+    footer:"Shopify-focused portfolio showcase"
+  },
+
+  ru:{
+    hero_title:"Я создаю Shopify страницы, которые продают, а не просто выглядят красиво",
+    hero_sub:"Shopify специалист · Liquid · UI/UX · Конверсионная разработка",
+    btn_projects:"Проекты",
+    btn_contact:"Контакт",
+    skills_title:"Навыки",
+    skill1:"Разработка Shopify тем",
+    skill2:"Кастомные Liquid секции",
+    skill3:"Конверсионный UI дизайн",
+    skill4:"Мобильная оптимизация",
+    case_title:"Мини кейс",
+    case1:"Оптимизация product page → улучшение пользовательского потока",
+    case2:"Исправление мобильных взаимодействий в секциях",
+    footer:"Портфолио Shopify разработчика"
+  }
+};
+
+function setLang(lang){
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n");
+    el.innerText = translations[lang][key];
+  });
+}
+</script>
+
+</body>
+</html>
