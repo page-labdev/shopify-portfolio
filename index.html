@@ -3,19 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Business Landing Page</title>
+<title>Business Growth Landing</title>
 
 <style>
 :root{
-  --bg1:#f7f8fc;
-  --bg2:#eef1ff;
+  --bg1:#f6f7ff;
+  --bg2:#eef3ff;
   --card:#ffffff;
   --text:#14151c;
   --muted:#5a6172;
-  --accent:#5b4dff;
-  --border:#e7e9f2;
+  --accent:#6c63ff;
+  --accent2:#8a7dff;
+  --border:#e8eaf3;
 }
 
+/* RESET */
 *{
   margin:0;
   padding:0;
@@ -24,7 +26,7 @@
 }
 
 body{
-  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  background:linear-gradient(145deg,var(--bg1),var(--bg2));
   color:var(--text);
 }
 
@@ -33,15 +35,16 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:16px 5%;
-  background:rgba(255,255,255,0.8);
+  padding:14px 5%;
+  background:rgba(255,255,255,0.7);
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--border);
 }
 
 .logo{
   font-weight:800;
-  font-size:14px;
+  font-size:13px;
+  letter-spacing:1px;
 }
 
 /* LANG */
@@ -49,26 +52,31 @@ header{
   background:#fff;
   border:1px solid var(--border);
   padding:5px 8px;
-  margin-left:3px;
+  margin-left:4px;
   border-radius:6px;
   font-size:12px;
+  cursor:pointer;
 }
 
-/* HERO MOBILE FIRST */
+/* HERO */
 .hero{
   padding:40px 5% 20px;
+  max-width:900px;
 }
 
 .hero h1{
-  font-size:26px;
+  font-size:28px;
   line-height:1.3;
+  background:linear-gradient(90deg,#2d2f7f,#6c63ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 .hero p{
   margin-top:12px;
   color:var(--muted);
   font-size:14px;
-  line-height:1.5;
+  line-height:1.6;
 }
 
 /* CTA */
@@ -87,6 +95,11 @@ header{
   border-radius:10px;
   font-size:13px;
   cursor:pointer;
+  transition:0.2s;
+}
+
+.cta button:hover{
+  background:var(--accent2);
 }
 
 /* SECTIONS */
@@ -105,7 +118,7 @@ header{
   line-height:1.6;
 }
 
-/* CARDS */
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:1fr;
@@ -117,17 +130,23 @@ header{
   background:var(--card);
   border:1px solid var(--border);
   padding:14px;
-  border-radius:12px;
-  font-size:14px;
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(20,20,50,0.06);
+  transition:0.25s;
 }
 
-/* TRUST SECTION */
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 35px rgba(20,20,50,0.1);
+}
+
+/* TRUST */
 .trust{
   background:#fff;
   border:1px solid var(--border);
   padding:15px;
   border-radius:14px;
-  margin-top:10px;
+  box-shadow:0 10px 25px rgba(20,20,50,0.06);
 }
 
 /* FINAL CTA */
@@ -138,6 +157,7 @@ header{
 
 .final h2{
   font-size:20px;
+  line-height:1.3;
 }
 
 .final button{
@@ -147,6 +167,7 @@ header{
   border:none;
   padding:12px 16px;
   border-radius:10px;
+  cursor:pointer;
 }
 
 /* FOOTER */
@@ -162,7 +183,7 @@ footer{
 <body>
 
 <header>
-  <div class="logo">BUSINESS GROWTH PAGE</div>
+  <div class="logo">BUSINESS GROWTH</div>
 
   <div class="lang">
     <button onclick="setLang('hy')">AM</button>
@@ -178,7 +199,7 @@ footer{
   </h1>
 
   <p data-i18n="hero_sub">
-    Մենք կառուցում ենք պարզ և արդյունավետ էջեր, որոնք օգնում են բիզնեսներին սկսել և աճել օնլայն։
+    Մենք կառուցում ենք պարզ, արագ և վաճառք ապահովող էջեր, որոնք օգնում են բիզնեսներին աճել օնլայն։
   </p>
 
   <div class="cta">
@@ -190,9 +211,7 @@ footer{
 <!-- PROBLEM -->
 <section class="section">
   <h2 data-i18n="p_title">Խնդիրը</h2>
-  <p data-i18n="p_text">
-    Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ օնլայն ներկայացում վաճառքներ ստանալու համար։
-  </p>
+  <p data-i18n="p_text"></p>
 </section>
 
 <!-- SOLUTION -->
@@ -200,10 +219,10 @@ footer{
   <h2 data-i18n="s_title">Լուծումը</h2>
 
   <div class="grid">
-    <div class="card" data-i18n="s1">Պարզ վաճառքի կառուցվածք</div>
-    <div class="card" data-i18n="s2">Mobile-first դիզայն</div>
-    <div class="card" data-i18n="s3">Արագ բեռնվող էջ</div>
-    <div class="card" data-i18n="s4">Վաճառքի կենտրոնացված UI</div>
+    <div class="card" data-i18n="s1"></div>
+    <div class="card" data-i18n="s2"></div>
+    <div class="card" data-i18n="s3"></div>
+    <div class="card" data-i18n="s4"></div>
   </div>
 </section>
 
@@ -211,101 +230,111 @@ footer{
 <section class="section">
   <h2 data-i18n="t_title">Վստահիր մեզ քո բիզնեսը</h2>
 
-  <div class="trust" data-i18n="t_text">
-    Մենք կենտրոնացած ենք արդյունքի վրա՝ ոչ թե պարզապես դիզայնի։
-    Յուրաքանչյուր էջ կառուցվում է այնպես, որ այցելուին վերածի հաճախորդի։
-  </div>
+  <div class="trust" data-i18n="t_text"></div>
 </section>
 
-<!-- PRACTICE / EDUCATION -->
+<!-- EDUCATION -->
 <section class="section">
-  <h2 data-i18n="e_title">Փորձ և կրթություն</h2>
+  <h2 data-i18n="e_title">Փորձ և ուսուցում</h2>
 
-  <div class="trust" data-i18n="e_text">
-    Ուսուցում և փորձ In / Success Academy-ում՝ UI, վեբ կառուցում և վաճառքի համակարգերի ստեղծում։
-  </div>
+  <div class="trust" data-i18n="e_text"></div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="final">
-  <h2 data-i18n="f_title">
-    Պատրա՞ստ ես զարգացնել քո բիզնեսը
-  </h2>
-
-  <button data-i18n="f_btn">Իմանալ ավելին</button>
+  <h2 data-i18n="f_title"></h2>
+  <button data-i18n="f_btn"></button>
 </section>
 
-<footer data-i18n="footer">
-  Business Growth Landing Page
-</footer>
+<footer data-i18n="footer"></footer>
 
 <script>
-const t={
+const t = {
  hy:{
   hero_title:"Քո բիզնեսը կարող է ունենալ իրական օնլայն վաճառքներ",
-  hero_sub:"Մենք կառուցում ենք պարզ և արդյունավետ էջեր, որոնք օգնում են բիզնեսներին աճել օնլայն",
+  hero_sub:"Պարզ և արդյունավետ էջեր, որոնք օգնում են բիզնեսներին աճել օնլայն",
   cta1:"Իմանալ ավելին",
   cta2:"Կապվել",
+
   p_title:"Խնդիրը",
-  p_text:"Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ օնլայն ներկայացում",
+  p_text:"Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ օնլայն վաճառքի համակարգ",
+
   s_title:"Լուծումը",
   s1:"Պարզ վաճառքի կառուցվածք",
   s2:"Mobile-first դիզայն",
   s3:"Արագ բեռնվող էջ",
-  s4:"Վաճառքի UI",
+  s4:"Վաճառքի կենտրոնացված UI",
+
   t_title:"Վստահիր մեզ քո բիզնեսը",
-  t_text:"Մենք կենտրոնացած ենք արդյունքի վրա՝ յուրաքանչյուր էջ կառուցելով վաճառքի համար",
-  e_title:"Փորձ և կրթություն",
-  e_text:"Ուսուցում և փորձ In / Success Academy-ում՝ UI և վեբ կառուցում",
+  t_text:"Մենք կենտրոնացած ենք արդյունքի վրա՝ ստեղծելով էջեր, որոնք վերածում են այցելուներին հաճախորդների",
+
+  e_title:"Փորձ և ուսուցում",
+  e_text:"Ուսուցում և փորձ In / Success Academy-ում՝ UI, վեբ կառուցում և վաճառքի համակարգեր",
+
   f_title:"Պատրա՞ստ ես զարգացնել քո բիզնեսը",
   f_btn:"Իմանալ ավելին",
+
   footer:"Business Growth Landing Page"
  },
+
  en:{
   hero_title:"Your business can have real online sales",
-  hero_sub:"We build simple and effective pages that help businesses grow online",
+  hero_sub:"Simple and effective pages that help businesses grow online",
   cta1:"Learn More",
   cta2:"Contact",
+
   p_title:"Problem",
-  p_text:"Many businesses have products but no proper online presence",
+  p_text:"Many businesses have products but no proper online sales system",
+
   s_title:"Solution",
   s1:"Simple sales structure",
   s2:"Mobile-first design",
   s3:"Fast loading page",
   s4:"Conversion-focused UI",
+
   t_title:"Trust your business with us",
-  t_text:"We focus on results, building pages that convert visitors into customers",
+  t_text:"We focus on results by building pages that turn visitors into customers",
+
   e_title:"Experience & Education",
   e_text:"Training and experience at In / Success Academy in UI and web development",
+
   f_title:"Ready to grow your business?",
   f_btn:"Learn More",
+
   footer:"Business Growth Landing Page"
  },
+
  ru:{
   hero_title:"Ваш бизнес может получать реальные онлайн продажи",
-  hero_sub:"Мы создаем простые и эффективные страницы для роста бизнеса",
+  hero_sub:"Простые и эффективные страницы для роста бизнеса",
   cta1:"Подробнее",
   cta2:"Связаться",
+
   p_title:"Проблема",
-  p_text:"У многих бизнесов есть товар, но нет онлайн представления",
+  p_text:"У многих бизнесов есть товар, но нет системы онлайн продаж",
+
   s_title:"Решение",
   s1:"Простая структура продаж",
   s2:"Mobile-first дизайн",
   s3:"Быстрая загрузка",
   s4:"Конверсионный UI",
+
   t_title:"Доверь нам свой бизнес",
   t_text:"Мы создаем страницы, которые превращают посетителей в клиентов",
+
   e_title:"Опыт и обучение",
   e_text:"Обучение и опыт в In / Success Academy",
+
   f_title:"Готов развивать бизнес?",
   f_btn:"Подробнее",
-  footer:"Business Growth Landing Page"
+
+  footer:"Лендинг для бизнеса"
  }
 };
 
 function setLang(l){
  document.querySelectorAll("[data-i18n]").forEach(el=>{
-  el.innerText=t[l][el.getAttribute("data-i18n")];
+  el.innerText = t[l][el.getAttribute("data-i18n")];
  });
 }
 </script>
