@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Online Sales Landing Page</title>
+<title>Business Landing Page</title>
 
 <style>
 :root{
-  --bg:#f7f8fc;
+  --bg1:#f7f8fc;
+  --bg2:#eef1ff;
   --card:#ffffff;
   --text:#14151c;
   --muted:#5a6172;
@@ -23,7 +24,7 @@
 }
 
 body{
-  background:var(--bg);
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
   color:var(--text);
 }
 
@@ -32,174 +33,128 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 6%;
-  background:#fff;
+  padding:16px 5%;
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(10px);
   border-bottom:1px solid var(--border);
 }
 
 .logo{
   font-weight:800;
+  font-size:14px;
 }
 
+/* LANG */
 .lang button{
   background:#fff;
   border:1px solid var(--border);
-  padding:6px 10px;
-  margin-left:5px;
-  cursor:pointer;
-  border-radius:8px;
+  padding:5px 8px;
+  margin-left:3px;
+  border-radius:6px;
+  font-size:12px;
 }
 
-/* HERO */
+/* HERO MOBILE FIRST */
 .hero{
-  padding:80px 6% 40px;
-  max-width:900px;
+  padding:40px 5% 20px;
 }
 
 .hero h1{
-  font-size:42px;
-  line-height:1.2;
+  font-size:26px;
+  line-height:1.3;
 }
 
 .hero p{
-  margin-top:15px;
+  margin-top:12px;
   color:var(--muted);
-  font-size:16px;
-  max-width:700px;
+  font-size:14px;
+  line-height:1.5;
 }
 
+/* CTA */
 .cta{
-  margin-top:25px;
+  margin-top:18px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
 }
 
 .cta button{
   background:var(--accent);
   color:#fff;
   border:none;
-  padding:12px 18px;
+  padding:10px 14px;
   border-radius:10px;
+  font-size:13px;
   cursor:pointer;
-  margin-right:10px;
 }
 
 /* SECTIONS */
 .section{
-  padding:50px 6%;
+  padding:25px 5%;
 }
 
 .section h2{
-  font-size:22px;
-  margin-bottom:15px;
+  font-size:18px;
+  margin-bottom:10px;
 }
 
 .section p{
   color:var(--muted);
+  font-size:14px;
   line-height:1.6;
-  max-width:800px;
 }
 
-/* GRID */
+/* CARDS */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:15px;
-  margin-top:20px;
+  grid-template-columns:1fr;
+  gap:10px;
+  margin-top:10px;
 }
 
 .card{
-  background:#fff;
+  background:var(--card);
   border:1px solid var(--border);
-  padding:18px;
-  border-radius:14px;
+  padding:14px;
+  border-radius:12px;
+  font-size:14px;
 }
 
-/* PROOF DEMO */
-.product{
+/* TRUST SECTION */
+.trust{
   background:#fff;
   border:1px solid var(--border);
   padding:15px;
-  border-radius:12px;
-}
-
-.product button{
+  border-radius:14px;
   margin-top:10px;
-  background:var(--accent);
-  color:#fff;
-  border:none;
-  padding:10px;
-  border-radius:8px;
-  cursor:pointer;
 }
 
-/* CART */
-.overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.4);
-  opacity:0;
-  pointer-events:none;
-  transition:0.3s;
-}
-
-.cart{
-  position:fixed;
-  top:0;
-  right:0;
-  width:340px;
-  height:100%;
-  background:#fff;
-  transform:translateX(100%);
-  transition:0.35s;
-  padding:20px;
-}
-
-.cart.active{
-  transform:translateX(0);
-}
-
-.overlay.active{
-  opacity:1;
-  pointer-events:auto;
-}
-
-.item{
-  margin-top:12px;
-  padding:10px;
-  border:1px solid #eee;
-  border-radius:8px;
-  animation:fadeIn 0.3s;
-}
-
-@keyframes fadeIn{
-  from{opacity:0;transform:translateY(10px);}
-  to{opacity:1;transform:translateY(0);}
-}
-
-/* CTA FINAL */
+/* FINAL CTA */
 .final{
   text-align:center;
-  padding:60px 6%;
+  padding:40px 5%;
 }
 
 .final h2{
-  font-size:26px;
+  font-size:20px;
 }
 
 .final button{
-  margin-top:20px;
+  margin-top:15px;
   background:var(--accent);
   color:#fff;
   border:none;
-  padding:14px 22px;
+  padding:12px 16px;
   border-radius:10px;
-  cursor:pointer;
 }
 
+/* FOOTER */
 footer{
   text-align:center;
-  padding:30px;
+  padding:25px;
   color:var(--muted);
-  font-size:13px;
+  font-size:12px;
 }
 </style>
 </head>
@@ -207,7 +162,7 @@ footer{
 <body>
 
 <header>
-  <div class="logo">ONLINE SALES BUILDER</div>
+  <div class="logo">BUSINESS GROWTH PAGE</div>
 
   <div class="lang">
     <button onclick="setLang('hy')">AM</button>
@@ -219,16 +174,16 @@ footer{
 <!-- HERO -->
 <section class="hero">
   <h1 data-i18n="hero_title">
-    Քո խանութի վաճառքները կարող են աճել՝ եթե ունենաս ճիշտ օնլայն էջ
+    Քո բիզնեսը կարող է ունենալ իրական օնլայն վաճառքներ
   </h1>
 
   <p data-i18n="hero_sub">
-    Ես օգնում եմ բիզնեսներին սկսել օնլայն վաճառքներ՝ կառուցելով պարզ, արագ և վաճառք ապահովող էջեր։
+    Մենք կառուցում ենք պարզ և արդյունավետ էջեր, որոնք օգնում են բիզնեսներին սկսել և աճել օնլայն։
   </p>
 
   <div class="cta">
-    <button data-i18n="cta1">Սկսել հիմա</button>
-    <button data-i18n="cta2">Կապ հաստատել</button>
+    <button data-i18n="cta1">Իմանալ ավելին</button>
+    <button data-i18n="cta2">Կապվել</button>
   </div>
 </section>
 
@@ -236,8 +191,7 @@ footer{
 <section class="section">
   <h2 data-i18n="p_title">Խնդիրը</h2>
   <p data-i18n="p_text">
-    Շատ մարդիկ ունեն ապրանք, բայց չունեն ճիշտ հարթակ այն վաճառելու համար։
-    Սոցիալական ցանցերը բավարար չեն կայուն վաճառք ստեղծելու համար։
+    Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ օնլայն ներկայացում վաճառքներ ստանալու համար։
   </p>
 </section>
 
@@ -246,124 +200,112 @@ footer{
   <h2 data-i18n="s_title">Լուծումը</h2>
 
   <div class="grid">
-    <div class="card" data-i18n="s1">Պարզ վաճառքի էջ</div>
-    <div class="card" data-i18n="s2">Mobile-friendly դիզայն</div>
+    <div class="card" data-i18n="s1">Պարզ վաճառքի կառուցվածք</div>
+    <div class="card" data-i18n="s2">Mobile-first դիզայն</div>
     <div class="card" data-i18n="s3">Արագ բեռնվող էջ</div>
-    <div class="card" data-i18n="s4">Վաճառքի հոսքով կառուցված UI</div>
+    <div class="card" data-i18n="s4">Վաճառքի կենտրոնացված UI</div>
   </div>
 </section>
 
-<!-- PROOF -->
+<!-- TRUST -->
 <section class="section">
-  <h2>Live Demo (փորձիր)</h2>
+  <h2 data-i18n="t_title">Վստահիր մեզ քո բիզնեսը</h2>
 
-  <div class="product">
-    <h3>Sample Product</h3>
-    <p>$29</p>
-    <button onclick="add()">Ավելացնել զամբյուղ</button>
+  <div class="trust" data-i18n="t_text">
+    Մենք կենտրոնացած ենք արդյունքի վրա՝ ոչ թե պարզապես դիզայնի։
+    Յուրաքանչյուր էջ կառուցվում է այնպես, որ այցելուին վերածի հաճախորդի։
+  </div>
+</section>
+
+<!-- PRACTICE / EDUCATION -->
+<section class="section">
+  <h2 data-i18n="e_title">Փորձ և կրթություն</h2>
+
+  <div class="trust" data-i18n="e_text">
+    Ուսուցում և փորձ In / Success Academy-ում՝ UI, վեբ կառուցում և վաճառքի համակարգերի ստեղծում։
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="final">
   <h2 data-i18n="f_title">
-    Պատրա՞ստ ես սկսել օնլայն վաճառքներ
+    Պատրա՞ստ ես զարգացնել քո բիզնեսը
   </h2>
 
-  <button data-i18n="f_btn">Եկեք սկսենք</button>
+  <button data-i18n="f_btn">Իմանալ ավելին</button>
 </section>
 
 <footer data-i18n="footer">
-  Online Sales Landing · Built for real business growth
+  Business Growth Landing Page
 </footer>
 
-<!-- CART -->
-<div class="overlay" onclick="closeCart()"></div>
-
-<div class="cart" id="cart">
-  <h3>Cart</h3>
-  <div id="items"></div>
-</div>
-
 <script>
-let count = 0;
-
-function add(){
-  count++;
-
-  const cart = document.getElementById("cart");
-  const items = document.getElementById("items");
-
-  const div = document.createElement("div");
-  div.className="item";
-  div.innerText="Product added";
-
-  items.appendChild(div);
-
-  cart.classList.add("active");
-  document.querySelector(".overlay").classList.add("active");
-}
-
-function closeCart(){
-  document.getElementById("cart").classList.remove("active");
-  document.querySelector(".overlay").classList.remove("active");
-}
-
-/* LANG */
 const t={
  hy:{
-  hero_title:"Քո խանութի վաճառքները կարող են աճել՝ եթե ունենաս ճիշտ օնլայն էջ",
-  hero_sub:"Ես օգնում եմ բիզնեսներին սկսել օնլայն վաճառքներ՝ պարզ և արդյունավետ էջերով",
-  cta1:"Սկսել հիմա",
-  cta2:"Կապ հաստատել",
+  hero_title:"Քո բիզնեսը կարող է ունենալ իրական օնլայն վաճառքներ",
+  hero_sub:"Մենք կառուցում ենք պարզ և արդյունավետ էջեր, որոնք օգնում են բիզնեսներին աճել օնլայն",
+  cta1:"Իմանալ ավելին",
+  cta2:"Կապվել",
   p_title:"Խնդիրը",
-  p_text:"Շատ մարդիկ ունեն ապրանք, բայց չունեն ճիշտ հարթակ վաճառելու համար",
+  p_text:"Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ օնլայն ներկայացում",
   s_title:"Լուծումը",
-  s1:"Պարզ վաճառքի էջ",
-  s2:"Mobile-friendly դիզայն",
-  s3:"Արագ էջ",
-  s4:"Վաճառքի կառուցվածք",
-  f_title:"Պատրա՞ստ ես սկսել օնլայն վաճառքներ",
-  f_btn:"Եկեք սկսենք",
-  footer:"Օնլայն վաճառքի էջ"
+  s1:"Պարզ վաճառքի կառուցվածք",
+  s2:"Mobile-first դիզայն",
+  s3:"Արագ բեռնվող էջ",
+  s4:"Վաճառքի UI",
+  t_title:"Վստահիր մեզ քո բիզնեսը",
+  t_text:"Մենք կենտրոնացած ենք արդյունքի վրա՝ յուրաքանչյուր էջ կառուցելով վաճառքի համար",
+  e_title:"Փորձ և կրթություն",
+  e_text:"Ուսուցում և փորձ In / Success Academy-ում՝ UI և վեբ կառուցում",
+  f_title:"Պատրա՞ստ ես զարգացնել քո բիզնեսը",
+  f_btn:"Իմանալ ավելին",
+  footer:"Business Growth Landing Page"
  },
  en:{
-  hero_title:"Your store sales can grow with the right online page",
-  hero_sub:"I help businesses start selling online with simple and effective landing pages",
-  cta1:"Start Now",
+  hero_title:"Your business can have real online sales",
+  hero_sub:"We build simple and effective pages that help businesses grow online",
+  cta1:"Learn More",
   cta2:"Contact",
   p_title:"Problem",
-  p_text:"Many people have products but no proper place to sell them online",
+  p_text:"Many businesses have products but no proper online presence",
   s_title:"Solution",
-  s1:"Simple sales page",
-  s2:"Mobile-friendly design",
+  s1:"Simple sales structure",
+  s2:"Mobile-first design",
   s3:"Fast loading page",
   s4:"Conversion-focused UI",
-  f_title:"Ready to start selling online?",
-  f_btn:"Let’s Start",
-  footer:"Online sales landing page"
+  t_title:"Trust your business with us",
+  t_text:"We focus on results, building pages that convert visitors into customers",
+  e_title:"Experience & Education",
+  e_text:"Training and experience at In / Success Academy in UI and web development",
+  f_title:"Ready to grow your business?",
+  f_btn:"Learn More",
+  footer:"Business Growth Landing Page"
  },
  ru:{
-  hero_title:"Продажи твоего бизнеса могут вырасти с правильной онлайн-страницей",
-  hero_sub:"Я помогаю бизнесам начать онлайн продажи через простые и эффективные страницы",
-  cta1:"Начать",
-  cta2:"Контакт",
+  hero_title:"Ваш бизнес может получать реальные онлайн продажи",
+  hero_sub:"Мы создаем простые и эффективные страницы для роста бизнеса",
+  cta1:"Подробнее",
+  cta2:"Связаться",
   p_title:"Проблема",
-  p_text:"У многих есть товар, но нет платформы для онлайн продаж",
+  p_text:"У многих бизнесов есть товар, но нет онлайн представления",
   s_title:"Решение",
-  s1:"Простая страница продаж",
-  s2:"Адаптивный дизайн",
+  s1:"Простая структура продаж",
+  s2:"Mobile-first дизайн",
   s3:"Быстрая загрузка",
   s4:"Конверсионный UI",
-  f_title:"Готов начать онлайн продажи?",
-  f_btn:"Начать",
-  footer:"Лендинг для онлайн продаж"
+  t_title:"Доверь нам свой бизнес",
+  t_text:"Мы создаем страницы, которые превращают посетителей в клиентов",
+  e_title:"Опыт и обучение",
+  e_text:"Обучение и опыт в In / Success Academy",
+  f_title:"Готов развивать бизнес?",
+  f_btn:"Подробнее",
+  footer:"Business Growth Landing Page"
  }
 };
 
 function setLang(l){
- document.querySelectorAll("[data-i18n]").forEach(e=>{
-  e.innerText=t[l][e.getAttribute("data-i18n")];
+ document.querySelectorAll("[data-i18n]").forEach(el=>{
+  el.innerText=t[l][el.getAttribute("data-i18n")];
  });
 }
 </script>
