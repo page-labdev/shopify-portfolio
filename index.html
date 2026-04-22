@@ -26,6 +26,7 @@ body{
   color:var(--text);
 }
 
+/* CONTAINER */
 .container{
   max-width:900px;
   margin:0 auto;
@@ -41,6 +42,22 @@ header{
   border-bottom:1px solid var(--border);
 }
 
+/* LOGO */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:800;
+  font-size:13px;
+}
+
+/* SHOPIFY ICON */
+.shopify-icon{
+  width:18px;
+  height:18px;
+}
+
+/* LANGUAGE SWITCH */
 .lang-switch button{
   margin-left:6px;
   padding:6px 10px;
@@ -51,17 +68,19 @@ header{
   font-size:12px;
 }
 
-.lang-switch button:hover{
-  background:#f0f0f0;
-}
-
 /* HERO */
-.hero{ padding:22px 5%; }
+.hero{
+  padding:22px 5%;
+}
 
 .hero-grid{
   display:flex;
   gap:30px;
   align-items:center;
+}
+
+.hero-text{
+  flex:1;
 }
 
 .hero-text h1{
@@ -74,6 +93,7 @@ header{
   font-size:14px;
   color:var(--muted);
   line-height:1.5;
+  margin-bottom:12px;
 }
 
 .cta a{
@@ -84,7 +104,6 @@ header{
   border-radius:8px;
   font-size:13px;
   text-decoration:none;
-  margin-top:10px;
 }
 
 /* SECTIONS */
@@ -107,6 +126,7 @@ header{
   line-height:1.5;
 }
 
+/* GRIDS */
 .services-grid,
 .skills-grid{
   display:grid;
@@ -114,12 +134,14 @@ header{
   gap:10px;
 }
 
+/* GRAPH */
 .graph img{
   width:100%;
   border-radius:12px;
   margin-top:8px;
 }
 
+/* FINAL CTA */
 .final{
   text-align:center;
   padding:20px 5%;
@@ -135,6 +157,7 @@ header{
   border-radius:8px;
 }
 
+/* FLOAT BUTTON */
 .whatsapp-float{
   position:fixed;
   bottom:18px;
@@ -152,7 +175,10 @@ header{
 
 /* MOBILE */
 @media(max-width:900px){
-  .hero-grid{flex-direction:column;text-align:center;}
+  .hero-grid{
+    flex-direction:column;
+    text-align:center;
+  }
 }
 </style>
 </head>
@@ -162,7 +188,12 @@ header{
 <div class="container">
 
 <header>
-  <div>BUSINESS GROWTH</div>
+
+  <!-- LOGO + SHOPIFY ICON -->
+  <div class="logo">
+    <img class="shopify-icon" src="https://cdn.worldvectorlogo.com/logos/shopify.svg" alt="Shopify">
+    BUSINESS GROWTH
+  </div>
 
   <!-- LANGUAGE SWITCH -->
   <div class="lang-switch">
@@ -170,6 +201,7 @@ header{
     <button onclick="setLang('en')">EN</button>
     <button onclick="setLang('ru')">RU</button>
   </div>
+
 </header>
 
 <!-- HERO -->
@@ -177,17 +209,16 @@ header{
   <div class="hero-grid">
 
     <div class="hero-text">
-
       <h1 data-i18n="hero_title">Քո բիզնեսը կարող է սկսել իրական օնլայն վաճառքներ</h1>
 
       <p data-i18n="hero_text">
         Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։
+        Սկսիր հիմա՝ առանց բարդ գործընթացների։
       </p>
 
       <div class="cta">
         <a href="#" data-i18n="cta">Գրել WhatsApp-ում</a>
       </div>
-
     </div>
 
   </div>
@@ -195,46 +226,40 @@ header{
 
 <!-- PROBLEM -->
 <section class="section">
-  <div class="box" data-i18n="problem">
-    Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ կառուցված համակարգ, որը կօգնի դրանք արդյունավետ վաճառել։
-  </div>
+  <div class="box" data-i18n="problem"></div>
 </section>
 
 <!-- SERVICES -->
 <section class="section">
-  <h2 data-i18n="services_title">Տամադրվող ծառայություններ</h2>
+  <h2 data-i18n="services_title"></h2>
 
-  <div class="box" data-i18n="services_text">
-    UI/UX դիզայն, վեբ կայքերի կառուցում և վաճառքի համակարգերի ստեղծում։
-  </div>
+  <div class="box" data-i18n="services_text"></div>
 </section>
 
 <!-- SKILLS -->
 <section class="section">
-  <h2 data-i18n="skills_title">Կիրառվող հմտություններ</h2>
+  <h2 data-i18n="skills_title"></h2>
 
   <div class="skills-grid">
-
     <div class="box">Shopify Development</div>
     <div class="box">UI/UX Design</div>
     <div class="box">HTML / CSS / Liquid</div>
     <div class="box">Landing Pages</div>
-
   </div>
 </section>
 
 <!-- GRAPH -->
 <section class="section">
-  <h2 data-i18n="growth_title">Աճի պատկերացում</h2>
+  <h2 data-i18n="growth_title"></h2>
 
   <div class="graph">
     <img src="https://t4.ftcdn.net/jpg/09/00/62/97/360_F_900629727_nLFzv8NdpbQEefppwbBUbpqDBBsl6uWB.jpg">
   </div>
 </section>
 
-<!-- CTA -->
+<!-- FINAL CTA -->
 <section class="final">
-  <h2 data-i18n="final_title">Եկ սկսենք ստեղծել էջ, որը աշխատում է քո փոխարեն</h2>
+  <h2 data-i18n="final_title"></h2>
 
   <a href="#" data-i18n="cta">Գրել WhatsApp-ում</a>
 </section>
@@ -247,9 +272,9 @@ header{
 const translations = {
   hy:{
     hero_title:"Քո բիզնեսը կարող է սկսել իրական օնլայն վաճառքներ",
-    hero_text:"Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։",
+    hero_text:"Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։ Սկսիր հիմա՝ առանց բարդ գործընթացների։",
     cta:"Գրել WhatsApp-ում",
-    problem:"Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ կառուցված համակարգ, որը կօգնի դրանք արդյունավետ վաճառել։",
+    problem:"Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ համակարգ վաճառքի համար։",
     services_title:"Տամադրվող ծառայություններ",
     services_text:"UI/UX դիզայն, վեբ կայքերի կառուցում և վաճառքի համակարգերի ստեղծում։",
     skills_title:"Կիրառվող հմտություններ",
@@ -259,10 +284,10 @@ const translations = {
 
   en:{
     hero_title:"Your business can start real online sales",
-    hero_text:"I help small businesses build landing pages that bring real customers.",
+    hero_text:"I help small businesses build landing pages that bring real customers. Start now without complexity.",
     cta:"Message on WhatsApp",
-    problem:"Many businesses have good products but lack a structured system to sell them effectively.",
-    services_title:"Services Offered",
+    problem:"Many businesses have good products but lack a system to sell them effectively.",
+    services_title:"Services",
     services_text:"UI/UX design, website development and sales system creation.",
     skills_title:"Skills",
     growth_title:"Growth overview",
