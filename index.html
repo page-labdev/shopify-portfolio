@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Business Growth - Agency Landing</title>
+<title>Business Growth - UI Agency Landing</title>
 
 <style>
 :root{
@@ -52,27 +52,34 @@ header{
   gap:10px;
 }
 
-.hero-left img,
-.hero-right img{
+/* MAIN IMAGE */
+.hero-main img{
   width:100%;
   height:100%;
   object-fit:cover;
   border-radius:14px;
 }
 
-/* RIGHT STACK */
-.hero-right{
+/* SIDE STACK */
+.hero-side{
   display:grid;
   gap:10px;
 }
 
-/* MOBILE STACK */
+.hero-side img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:14px;
+}
+
+/* MOBILE */
 @media(max-width:768px){
   .hero-grid{
     grid-template-columns:1fr;
   }
 
-  .hero-right{
+  .hero-side{
     grid-template-columns:1fr 1fr;
   }
 }
@@ -90,7 +97,6 @@ header{
   line-height:1.6;
 }
 
-/* CTA */
 .cta{
   margin-top:15px;
 }
@@ -125,7 +131,7 @@ header{
   line-height:1.6;
 }
 
-/* GRAPH IMAGE */
+/* GRAPH */
 .graph img{
   width:100%;
   height:170px;
@@ -134,7 +140,7 @@ header{
   margin-top:10px;
 }
 
-/* FINAL CTA */
+/* CTA */
 .final{
   text-align:center;
   padding:30px 5%;
@@ -150,7 +156,7 @@ header{
   border-radius:10px;
 }
 
-/* FLOAT WHATSAPP */
+/* WHATSAPP */
 .whatsapp-float{
   position:fixed;
   bottom:18px;
@@ -188,15 +194,15 @@ footer{
 
   <div class="hero-grid">
 
-    <!-- MAIN IMAGE -->
-    <div class="hero-left">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80">
+    <!-- MAIN UI IMAGE -->
+    <div class="hero-main">
+      <img src="https://images.unsplash.com/photo-1556741533-b5b0b7f3b6d1?auto=format&fit=crop&w=1200&q=80">
     </div>
 
-    <!-- STACKED UI IMAGES -->
-    <div class="hero-right">
-      <img src="https://images.unsplash.com/photo-1556741533-f6acd647d2fb?auto=format&fit=crop&w=1200&q=80">
+    <!-- SIDE UI STACK -->
+    <div class="hero-side">
       <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
+      <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1200&q=80">
     </div>
 
   </div>
@@ -204,11 +210,11 @@ footer{
   <h1>Քո բիզնեսը կարող է սկսել իրական օնլայն վաճառքներ</h1>
 
   <p>
-    Ես կառուցում եմ վաճառքի էջեր և համակարգեր, որոնք օգնում են փոքր բիզնեսներին ստանալ իրական պատվերներ WhatsApp-ից և կայքից։
+    Ես կառուցում եմ վաճառքի համակարգեր և landing էջեր, որոնք օգնում են բիզնեսներին ստանալ իրական հաճախորդներ WhatsApp-ից և կայքից։
   </p>
 
   <div class="cta">
-    <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20վաճառքի%20էջ%20իմ%20բիզնեսի%20համար">
+    <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20վաճառքի%20էջ">
       Գրել WhatsApp-ում
     </a>
   </div>
@@ -219,7 +225,7 @@ footer{
 <section class="section">
   <h2>Խնդիրը</h2>
   <div class="box">
-    Շատ բիզնեսներ ունեն ապրանք, բայց չունեն համակարգված օնլայն վաճառք։
+    Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն համակարգված օնլայն վաճառք։
   </div>
 </section>
 
@@ -227,10 +233,10 @@ footer{
 <section class="section">
   <h2>Լուծումը</h2>
   <div class="box">
-    ✔ Վաճառքի կառուցվածք<br>
-    ✔ Mobile-first էջ<br>
-    ✔ Արագ բեռնվող կայք<br>
-    ✔ WhatsApp lead համակարգ
+    ✔ Landing էջեր<br>
+    ✔ Mobile-first դիզայն<br>
+    ✔ Արագ կայքեր<br>
+    ✔ WhatsApp վաճառքի համակարգ
   </div>
 </section>
 
@@ -238,11 +244,11 @@ footer{
 <section class="section">
   <h2>Վստահիր մեզ քո բիզնեսը</h2>
   <div class="box">
-    Մենք կառուցում ենք էջեր, որոնք ոչ միայն գեղեցիկ են, այլ իրականում բերում են հաճախորդներ։
+    Մենք կառուցում ենք ոչ միայն դիզայն, այլ վաճառք ապահովող համակարգեր։
   </div>
 </section>
 
-<!-- GRAPH (YOUR IMAGE AREA) -->
+<!-- GRAPH -->
 <section class="section">
   <h2>Աճի արդյունք</h2>
 
@@ -251,7 +257,7 @@ footer{
   </div>
 
   <div class="box">
-    Ճիշտ կառուցված էջը կարող է զգալիորեն ավելացնել պատվերները նույնիսկ առանց մեծ գովազդային բյուջեի։
+    Ճիշտ կառուցված էջը կարող է զգալիորեն ավելացնել պատվերները առանց մեծ գովազդային բյուջեի։
   </div>
 </section>
 
@@ -266,6 +272,7 @@ footer{
 <!-- FINAL CTA -->
 <section class="final">
   <h2>Սկսե՞նք քո բիզնեսի աճը հիմա</h2>
+
   <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20սկսել%20վաճառք">
     Գրել WhatsApp-ում
   </a>
