@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Business Growth - UI Agency Landing</title>
+<title>Business Growth - Agency Landing</title>
 
 <style>
 :root{
@@ -41,51 +41,21 @@ header{
   font-size:13px;
 }
 
-/* HERO COLLAGE */
+/* HERO */
 .hero{
   padding:20px 5%;
 }
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:10px;
-}
-
-/* MAIN IMAGE */
-.hero-main img{
+/* DEVICE SHOWCASE IMAGE */
+.hero img{
   width:100%;
-  height:100%;
+  height:220px;
   object-fit:cover;
-  border-radius:14px;
-}
-
-/* SIDE STACK */
-.hero-side{
-  display:grid;
-  gap:10px;
-}
-
-.hero-side img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:14px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .hero-grid{
-    grid-template-columns:1fr;
-  }
-
-  .hero-side{
-    grid-template-columns:1fr 1fr;
-  }
+  border-radius:16px;
+  margin-bottom:14px;
 }
 
 .hero h1{
-  margin-top:15px;
   font-size:24px;
   line-height:1.3;
 }
@@ -97,6 +67,7 @@ header{
   line-height:1.6;
 }
 
+/* CTA */
 .cta{
   margin-top:15px;
 }
@@ -140,7 +111,7 @@ header{
   margin-top:10px;
 }
 
-/* CTA */
+/* FINAL CTA */
 .final{
   text-align:center;
   padding:30px 5%;
@@ -156,7 +127,7 @@ header{
   border-radius:10px;
 }
 
-/* WHATSAPP */
+/* WHATSAPP FLOAT */
 .whatsapp-float{
   position:fixed;
   bottom:18px;
@@ -189,32 +160,20 @@ footer{
   <div class="logo">BUSINESS GROWTH</div>
 </header>
 
-<!-- HERO COLLAGE -->
+<!-- HERO (OPTION 3: AGENCY DEVICE SHOWCASE) -->
 <section class="hero">
 
-  <div class="hero-grid">
-
-    <!-- MAIN UI IMAGE -->
-    <div class="hero-main">
-      <img src="https://images.unsplash.com/photo-1556741533-b5b0b7f3b6d1?auto=format&fit=crop&w=1200&q=80">
-    </div>
-
-    <!-- SIDE UI STACK -->
-    <div class="hero-side">
-      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
-      <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1200&q=80">
-    </div>
-
-  </div>
+  <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1400&q=80">
 
   <h1>Քո բիզնեսը կարող է սկսել իրական օնլայն վաճառքներ</h1>
 
   <p>
-    Ես կառուցում եմ վաճառքի համակարգեր և landing էջեր, որոնք օգնում են բիզնեսներին ստանալ իրական հաճախորդներ WhatsApp-ից և կայքից։
+    Ես կառուցում եմ վաճառքի համակարգեր և responsive կայքեր (mobile + desktop),
+    որոնք օգնում են բիզնեսներին ստանալ իրական հաճախորդներ WhatsApp-ից և կայքից։
   </p>
 
   <div class="cta">
-    <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20վաճառքի%20էջ">
+    <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20վաճառքի%20էջ%20իմ%20բիզնեսի%20համար">
       Գրել WhatsApp-ում
     </a>
   </div>
@@ -235,8 +194,8 @@ footer{
   <div class="box">
     ✔ Landing էջեր<br>
     ✔ Mobile-first դիզայն<br>
-    ✔ Արագ կայքեր<br>
-    ✔ WhatsApp վաճառքի համակարգ
+    ✔ Responsive համակարգ (desktop + mobile)<br>
+    ✔ WhatsApp վաճառքի հոսք
   </div>
 </section>
 
@@ -244,11 +203,11 @@ footer{
 <section class="section">
   <h2>Վստահիր մեզ քո բիզնեսը</h2>
   <div class="box">
-    Մենք կառուցում ենք ոչ միայն դիզայն, այլ վաճառք ապահովող համակարգեր։
+    Մենք կառուցում ենք ոչ միայն դիզայն, այլ վաճառք ապահովող digital համակարգեր։
   </div>
 </section>
 
-<!-- GRAPH -->
+<!-- GRAPH (ANALYTICS STYLE) -->
 <section class="section">
   <h2>Աճի արդյունք</h2>
 
@@ -265,7 +224,7 @@ footer{
 <section class="section">
   <h2>Փորձ և ուսուցում</h2>
   <div class="box">
-    In / Success Academy-ում ձեռք բերված փորձ՝ UI, վեբ կառուցում և վաճառքի համակարգեր։
+    In / Success Academy-ում ձեռք բերված փորձ՝ UI, web development և վաճառքի համակարգեր։
   </div>
 </section>
 
@@ -278,7 +237,7 @@ footer{
   </a>
 </section>
 
-<!-- FLOAT -->
+<!-- FLOAT BUTTON -->
 <a class="whatsapp-float"
    href="https://wa.me/0000000000?text=Բարև"
    target="_blank">
