@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title></title>
+<title>Business Growth - WhatsApp Leads</title>
 
 <style>
 :root{
@@ -36,22 +36,90 @@ header{
   border-bottom:1px solid var(--border);
 }
 
-/* HERO */
-.hero{
-  padding:22px 5%;
+.logo{
+  font-weight:800;
+  font-size:13px;
 }
 
-.hero img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  border-radius:14px;
+/* HERO */
+.hero{
+  padding:30px 5%;
+}
+
+.hero-grid{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:50px;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+/* TEXT */
+.hero-text{
+  flex:1;
+}
+
+.hero-text h1{
+  font-size:28px;
+  line-height:1.2;
   margin-bottom:12px;
+}
+
+.hero-text p{
+  font-size:15px;
+  color:var(--muted);
+  line-height:1.6;
+  margin-bottom:16px;
+}
+
+/* CTA */
+.cta a{
+  display:inline-block;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  padding:12px 16px;
+  border-radius:10px;
+  font-size:13px;
+}
+
+/* VISUAL */
+.hero-visual{
+  flex:1;
+  position:relative;
+}
+
+/* HERO IMAGE (correct one you provided) */
+.hero-main{
+  width:100%;
+  border-radius:16px;
+  position:relative;
+  z-index:2;
+  object-fit:cover;
+}
+
+/* GRAPHIC IMAGE (correct ftcdn) */
+.hero-graphic{
+  position:absolute;
+  top:-30px;
+  left:-40px;
+  width:120%;
+  opacity:0.08;
+  z-index:1;
+  pointer-events:none;
 }
 
 /* SECTIONS */
 .section{
   padding:22px 5%;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.section h2{
+  font-size:18px;
+  margin-bottom:8px;
 }
 
 .box{
@@ -59,6 +127,9 @@ header{
   border:1px solid var(--border);
   padding:14px;
   border-radius:14px;
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.6;
 }
 
 /* GRAPH */
@@ -70,7 +141,23 @@ header{
   margin-top:10px;
 }
 
-/* FLOAT BUTTON */
+/* FINAL CTA */
+.final{
+  text-align:center;
+  padding:30px 5%;
+}
+
+.final a{
+  display:inline-block;
+  margin-top:15px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  padding:12px 16px;
+  border-radius:10px;
+}
+
+/* FLOAT */
 .whatsapp-float{
   position:fixed;
   bottom:18px;
@@ -83,34 +170,132 @@ header{
   display:flex;
   align-items:center;
   justify-content:center;
+  font-size:24px;
   text-decoration:none;
   box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-grid{
+    flex-direction:column;
+    text-align:center;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header></header>
+<header>
+  <div class="logo">BUSINESS GROWTH</div>
+</header>
 
-<!-- HERO IMAGE ONLY -->
+<!-- HERO -->
 <section class="hero">
-  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"/>
-</section>
+  <div class="hero-grid">
 
-<!-- GRAPH IMAGE -->
-<section class="section">
-  <div class="graph">
-    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"/>
+    <!-- TEXT (RESTORED EXACT CONTENT) -->
+    <div class="hero-text">
+
+      <h1>Քո բիզնեսը կարող է սկսել իրական օնլայն վաճառքներ</h1>
+
+      <p>
+        Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։
+        Սկսիր հիմա՝ առանց բարդ գործընթացների։
+      </p>
+
+      <div class="cta">
+        <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20ստանալ%20օնլայն%20վաճառքի%20էջ">
+          Գրել WhatsApp-ում
+        </a>
+      </div>
+
+    </div>
+
+    <!-- VISUAL -->
+    <div class="hero-visual">
+
+      <!-- HERO IMAGE -->
+      <img class="hero-main"
+           src="https://www.e-ways.com.tw/upload/article/article_479.jpg"
+           alt="Hero">
+
+      <!-- GRAPHIC OVERLAY -->
+      <div class="hero-graphic">
+        <img src="https://t4.ftcdn.net/jpg/09/00/62/97/360_F_900629727_nLFzv8NdpbQEefppwbBUbpqDBBsl6uWB.jpg"
+             alt="">
+      </div>
+
+    </div>
+
   </div>
 </section>
 
-<!-- FLOAT BUTTON -->
-<a class="whatsapp-float" href="#">
+<!-- PROBLEM -->
+<section class="section">
+  <h2>Խնդիրը</h2>
+  <div class="box">
+    Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ համակարգ դրանք օնլայն վաճառելու համար։
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="section">
+  <h2>Լուծումը</h2>
+  <div class="box">
+    ✔ Պարզ վաճառքի էջ<br>
+    ✔ Mobile-first դիզայն<br>
+    ✔ Արագ բեռնվող կայք<br>
+    ✔ Վաճառքի կենտրոնացված կառուցվածք
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="section">
+  <h2>Վստահիր մեզ քո բիզնեսը</h2>
+  <div class="box">
+    Մենք կենտրոնացած ենք արդյունքի վրա՝ ոչ թե պարզապես դիզայնի։
+    Յուրաքանչյուր էջ կառուցվում է այնպես, որ այցելուին վերածի հաճախորդի։
+  </div>
+</section>
+
+<!-- GRAPH -->
+<section class="section">
+  <h2>Աճի պատկերացում</h2>
+
+  <div class="graph">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"/>
+  </div>
+
+  <div class="box">
+    Ճիշտ կառուցված էջը կարող է զգալիորեն բարձրացնել քո վաճառքները առանց լրացուցիչ գովազդի։
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section">
+  <h2>Փորձ և ուսուցում</h2>
+
+  <div class="box">
+    In / Success Academy-ում ձեռք բերված փորձ՝ UI, վեբ կառուցում և վաճառքի համակարգերի ստեղծում։
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <h2>Սկսե՞նք քո բիզնեսի աճը հիմա</h2>
+
+  <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20սկսել%20օնլայն%20վաճառք">
+    Գրել WhatsApp-ում
+  </a>
+</section>
+
+<a class="whatsapp-float"
+   href="https://wa.me/0000000000?text=Բարև"
+   target="_blank">
   💬
 </a>
-
-<footer></footer>
 
 </body>
 </html>
