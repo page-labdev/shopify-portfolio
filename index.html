@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Business Growth - WhatsApp Leads</title>
+<title>Business Growth - Agency Landing</title>
 
 <style>
 :root{
-  --bg:#fbf7f2;
+  --bg:#f6f3ef;
   --text:#1d1d1d;
   --muted:#6a6a6a;
   --accent:#2f6f5e;
@@ -41,20 +41,44 @@ header{
   font-size:13px;
 }
 
-/* HERO */
+/* HERO COLLAGE */
 .hero{
-  padding:22px 5%;
+  padding:20px 5%;
 }
 
-.hero img{
+.hero-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:10px;
+}
+
+.hero-left img,
+.hero-right img{
   width:100%;
-  height:180px;
+  height:100%;
   object-fit:cover;
   border-radius:14px;
-  margin-bottom:12px;
+}
+
+/* RIGHT STACK */
+.hero-right{
+  display:grid;
+  gap:10px;
+}
+
+/* MOBILE STACK */
+@media(max-width:768px){
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-right{
+    grid-template-columns:1fr 1fr;
+  }
 }
 
 .hero h1{
+  margin-top:15px;
   font-size:24px;
   line-height:1.3;
 }
@@ -101,6 +125,15 @@ header{
   line-height:1.6;
 }
 
+/* GRAPH IMAGE */
+.graph img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-top:10px;
+}
+
 /* FINAL CTA */
 .final{
   text-align:center;
@@ -117,7 +150,7 @@ header{
   border-radius:10px;
 }
 
-/* WHATSAPP FLOAT */
+/* FLOAT WHATSAPP */
 .whatsapp-float{
   position:fixed;
   bottom:18px;
@@ -150,100 +183,97 @@ footer{
   <div class="logo">BUSINESS GROWTH</div>
 </header>
 
-<!-- HERO -->
+<!-- HERO COLLAGE -->
 <section class="hero">
 
-  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"/>
+  <div class="hero-grid">
+
+    <!-- MAIN IMAGE -->
+    <div class="hero-left">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80">
+    </div>
+
+    <!-- STACKED UI IMAGES -->
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1556741533-f6acd647d2fb?auto=format&fit=crop&w=1200&q=80">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
+    </div>
+
+  </div>
 
   <h1>Քո բիզնեսը կարող է սկսել իրական օնլայն վաճառքներ</h1>
 
   <p>
-    Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։
-    Սկսիր հիմա՝ առանց բարդ գործընթացների։
+    Ես կառուցում եմ վաճառքի էջեր և համակարգեր, որոնք օգնում են փոքր բիզնեսներին ստանալ իրական պատվերներ WhatsApp-ից և կայքից։
   </p>
 
   <div class="cta">
-    <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20ստանալ%20օնլայն%20վաճառքի%20էջ">
+    <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20վաճառքի%20էջ%20իմ%20բիզնեսի%20համար">
       Գրել WhatsApp-ում
     </a>
   </div>
+
 </section>
 
 <!-- PROBLEM -->
 <section class="section">
   <h2>Խնդիրը</h2>
-
   <div class="box">
-    Շատ բիզնեսներ ունեն լավ ապրանքներ, բայց չունեն ճիշտ համակարգ դրանք օնլայն վաճառելու համար։
+    Շատ բիզնեսներ ունեն ապրանք, բայց չունեն համակարգված օնլայն վաճառք։
   </div>
 </section>
 
 <!-- SOLUTION -->
 <section class="section">
   <h2>Լուծումը</h2>
-
   <div class="box">
-    ✔ Պարզ վաճառքի էջ<br>
-    ✔ Mobile-first դիզայն<br>
+    ✔ Վաճառքի կառուցվածք<br>
+    ✔ Mobile-first էջ<br>
     ✔ Արագ բեռնվող կայք<br>
-    ✔ Վաճառքի կենտրոնացված կառուցվածք
+    ✔ WhatsApp lead համակարգ
   </div>
 </section>
 
 <!-- TRUST -->
 <section class="section">
   <h2>Վստահիր մեզ քո բիզնեսը</h2>
-
   <div class="box">
-    Մենք կենտրոնացած ենք արդյունքի վրա՝ ոչ թե պարզապես դիզայնի։
-    Յուրաքանչյուր էջ կառուցվում է այնպես, որ այցելուին վերածի հաճախորդի։
+    Մենք կառուցում ենք էջեր, որոնք ոչ միայն գեղեցիկ են, այլ իրականում բերում են հաճախորդներ։
   </div>
 </section>
 
-<!-- UPGRADED GRAPH / RESULTS -->
+<!-- GRAPH (YOUR IMAGE AREA) -->
 <section class="section">
-  <h2>Աճի իրական արդյունք</h2>
+  <h2>Աճի արդյունք</h2>
 
-  <div class="box" style="border-left:4px solid #c9a86a;">
-    <strong>Մինչ էջի կառուցումը</strong><br>
-    • Անկայուն վաճառքներ<br>
-    • Սոցիալական ցանցերից քիչ պատվերներ<br>
-    • Չկա համակարգված օնլայն հարթակ
+  <div class="graph">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
   </div>
 
-  <div class="box" style="margin-top:10px; border-left:4px solid #2f6f5e;">
-    <strong>Հետո (վաճառքի էջի ներդրումից հետո)</strong><br>
-    • Ավելի շատ հաճախորդներ WhatsApp-ից<br>
-    • Կայուն պատվերների հոսք<br>
-    • Ավելի բարձր վստահություն բրենդի նկատմամբ
-  </div>
-
-  <div class="box" style="margin-top:10px;">
-    Ճիշտ կառուցված վաճառքի էջը կարող է փոխել բիզնեսի արդյունքը առանց լրացուցիչ գովազդի բյուջեի։
+  <div class="box">
+    Ճիշտ կառուցված էջը կարող է զգալիորեն ավելացնել պատվերները նույնիսկ առանց մեծ գովազդային բյուջեի։
   </div>
 </section>
 
 <!-- EDUCATION -->
 <section class="section">
   <h2>Փորձ և ուսուցում</h2>
-
   <div class="box">
-    In / Success Academy-ում ձեռք բերված փորձ՝ UI, վեբ կառուցում և վաճառքի համակարգերի ստեղծում։
+    In / Success Academy-ում ձեռք բերված փորձ՝ UI, վեբ կառուցում և վաճառքի համակարգեր։
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="final">
   <h2>Սկսե՞նք քո բիզնեսի աճը հիմա</h2>
-
-  <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20սկսել%20օնլայն%20վաճառք">
+  <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20սկսել%20վաճառք">
     Գրել WhatsApp-ում
   </a>
 </section>
 
-<!-- FLOAT BUTTON -->
+<!-- FLOAT -->
 <a class="whatsapp-float"
-   href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20խորհրդատվություն"
+   href="https://wa.me/0000000000?text=Բարև"
    target="_blank">
   💬
 </a>
