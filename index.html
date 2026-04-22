@@ -85,39 +85,13 @@ header{
   text-decoration:none;
 }
 
-.hero-visual{
-  position:relative;
-}
-
-.hero-visual img.main{
+/* IMAGE */
+.hero-visual img{
   width:100%;
   border-radius:14px;
 }
 
-.hero-visual img.overlay{
-  position:absolute;
-  top:-20px;
-  left:-20px;
-  width:120%;
-  opacity:0.1;
-}
-
-/* SERVICES */
-.services-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-
-.card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:12px;
-  font-size:13px;
-  color:var(--muted);
-}
-
+/* SECTION */
 .section{
   padding:14px 5%;
 }
@@ -129,6 +103,29 @@ header{
   border-radius:12px;
   font-size:13px;
   color:var(--muted);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid var(--border);
+  padding:12px;
+  border-radius:12px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* GRAPH */
+.graph img{
+  width:100%;
+  border-radius:12px;
+  margin-top:10px;
 }
 
 /* FINAL */
@@ -158,14 +155,6 @@ header{
   align-items:center;
   justify-content:center;
   color:#fff;
-}
-
-/* MOBILE */
-@media(max-width:900px){
-  .hero-grid{
-    flex-direction:column;
-    text-align:center;
-  }
 }
 </style>
 </head>
@@ -198,26 +187,35 @@ header{
     </div>
 
     <div class="hero-visual">
-      <img class="main" src="https://www.e-ways.com.tw/upload/article/article_479.jpg">
-      <img class="overlay" src="https://t4.ftcdn.net/jpg/09/00/62/97/360_F_900629727_nLFzv8NdpbQEefppwbBUbpqDBBsl6uWB.jpg">
+      <img src="https://www.e-ways.com.tw/upload/article/article_479.jpg">
     </div>
 
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- VALUE -->
+<section class="section">
+  <div class="grid">
+    <div class="card" id="value_1"></div>
+    <div class="card" id="value_2"></div>
+  </div>
+</section>
+
+<!-- SERVICES SHORT -->
 <section class="section">
   <h2 id="services_title"></h2>
-
   <div class="highlight" id="services_intro"></div>
+</section>
 
-  <div class="services-grid" style="margin-top:10px;">
-    <div class="card" id="s1"></div>
-    <div class="card" id="s2"></div>
-    <div class="card" id="s3"></div>
-    <div class="card" id="s4"></div>
-    <div class="card" id="s5"></div>
+<!-- GROWTH -->
+<section class="section">
+  <h2 id="growth_title"></h2>
+
+  <div class="graph">
+    <img src="https://t4.ftcdn.net/jpg/09/00/62/97/360_F_900629727_nLFzv8NdpbQEefppwbBUbpqDBBsl6uWB.jpg">
   </div>
+
+  <div class="highlight" id="growth_text"></div>
 </section>
 
 <!-- FINAL -->
@@ -238,14 +236,14 @@ hy:{
   hero_text:"Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։",
   cta:"Գրել WhatsApp-ում",
 
-  services_title:"Իմ կողմից տրամադրվող ծառայություններ",
-  services_intro:"UI/UX դիզայն, վեբ կայքերի կառուցում և վաճառքի համակարգերի ստեղծում՝ Success Academy-ում ստացած մասնագիտական պատրաստվածությամբ։",
+  value_1:"Shopify խանութը դիզայնի խնդիր չէ — այն վաճառքի համակարգ է։",
+  value_2:"Շատ խանութներ չեն աշխատում, որովհետև դրանք կառուցված չեն վաճառքի կառուցվածքով։",
 
-  s1:"Վաճառք ապահովող landing էջերի կառուցում",
-  s2:"Օնլայն խանութի կառուցում և կարգավորում (Shopify store setup)",
-  s3:"Բոլոր սարքերին հարմարեցված կայքերի ստեղծում (Responsive Design)",
-  s4:"Կայքերի դիզայն և վաճառքի օպտիմիզացում (Redesign & optimization)",
-  s5:"Հավելվածների ինտեգրում (Apps & Tools)",
+  services_title:"Իմ մոտեցումը",
+  services_intro:"Ես կառուցում եմ վաճառքի կենտրոնացված Shopify համակարգեր, ոչ պարզապես կայքեր։",
+
+  growth_title:"Աճի պատկերացում",
+  growth_text:"Ճիշտ կառուցված վաճառքի էջը կարող է զգալիորեն ավելացնել քո վաճառքները՝ առանց լրացուցիչ գովազդային բյուջեի։",
 
   final_title:"Եկ ստեղծենք էջ, որը աշխատում է քո փոխարեն",
   final_cta:"Սկսել հիմա"
@@ -253,17 +251,17 @@ hy:{
 
 en:{
   hero_title:"Your business can start generating real online sales",
-  hero_text:"I help small businesses create landing pages that attract real customers.",
+  hero_text:"I help small businesses build landing pages that attract real customers.",
   cta:"Message on WhatsApp",
 
-  services_title:"Services I Offer",
-  services_intro:"UI/UX design, website development, and sales system creation based on professional training at Success Academy.",
+  value_1:"A Shopify store is not a design problem — it is a conversion system.",
+  value_2:"Most stores fail because they are not built with a sales structure.",
 
-  s1:"Conversion-focused landing page development",
-  s2:"Shopify store setup and configuration",
-  s3:"Responsive website development for all devices",
-  s4:"Website redesign and conversion optimization",
-  s5:"App and tool integrations",
+  services_title:"My approach",
+  services_intro:"I build conversion-focused Shopify systems, not just websites.",
+
+  growth_title:"Growth overview",
+  growth_text:"A properly structured sales page can significantly increase sales without additional ad budget.",
 
   final_title:"Let’s build a page that works for you",
   final_cta:"Start now"
@@ -271,17 +269,17 @@ en:{
 
 ru:{
   hero_title:"Ваш бизнес может начать реальные онлайн-продажи",
-  hero_text:"Я помогаю малому бизнесу создавать страницы, которые привлекают реальных клиентов.",
+  hero_text:"Я помогаю малому бизнесу создавать страницы, которые привлекают клиентов.",
   cta:"Написать в WhatsApp",
 
-  services_title:"Предоставляемые услуги",
-  services_intro:"UI/UX дизайн, разработка сайтов и создание систем продаж на основе профессиональной подготовки в Success Academy.",
+  value_1:"Shopify-магазин — это не дизайн, а система продаж.",
+  value_2:"Большинство магазинов не работают, потому что у них нет структуры продаж.",
 
-  s1:"Создание продающих лендингов",
-  s2:"Настройка и запуск Shopify-магазина",
-  s3:"Адаптивная разработка сайтов для всех устройств",
-  s4:"Редизайн сайта и оптимизация конверсии",
-  s5:"Интеграция приложений и сервисов",
+  services_title:"Мой подход",
+  services_intro:"Я создаю Shopify-системы, ориентированные на конверсию, а не просто сайты.",
+
+  growth_title:"Обзор роста",
+  growth_text:"Правильно построенная продающая страница может значительно увеличить продажи без дополнительной рекламы.",
 
   final_title:"Давайте создадим страницу, которая работает за вас",
   final_cta:"Начать сейчас"
@@ -290,18 +288,19 @@ ru:{
 };
 
 function setLang(lang){
+
   document.getElementById("hero_title").innerText = content[lang].hero_title;
   document.getElementById("hero_text").innerText = content[lang].hero_text;
   document.getElementById("cta_btn").innerText = content[lang].cta;
 
+  document.getElementById("value_1").innerText = content[lang].value_1;
+  document.getElementById("value_2").innerText = content[lang].value_2;
+
   document.getElementById("services_title").innerText = content[lang].services_title;
   document.getElementById("services_intro").innerText = content[lang].services_intro;
 
-  document.getElementById("s1").innerText = content[lang].s1;
-  document.getElementById("s2").innerText = content[lang].s2;
-  document.getElementById("s3").innerText = content[lang].s3;
-  document.getElementById("s4").innerText = content[lang].s4;
-  document.getElementById("s5").innerText = content[lang].s5;
+  document.getElementById("growth_title").innerText = content[lang].growth_title;
+  document.getElementById("growth_text").innerText = content[lang].growth_text;
 
   document.getElementById("final_title").innerText = content[lang].final_title;
   document.getElementById("final_cta").innerText = content[lang].final_cta;
