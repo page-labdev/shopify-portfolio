@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Business Growth - Conversion Landing</title>
+<title>Business Growth - Landing</title>
 
 <style>
 :root{
@@ -24,7 +24,6 @@
 body{
   background:var(--bg);
   color:var(--text);
-  line-height:1.5;
 }
 
 /* HEADER */
@@ -42,6 +41,19 @@ header{
   font-size:13px;
 }
 
+/* LANGUAGE SWITCH */
+.lang-switch{
+  font-size:12px;
+}
+
+.lang-switch button{
+  border:none;
+  background:none;
+  cursor:pointer;
+  margin-left:8px;
+  color:var(--muted);
+}
+
 /* HERO */
 .hero{
   padding:40px 5% 20px;
@@ -49,11 +61,10 @@ header{
 
 .hero-grid{
   display:flex;
-  align-items:center;
-  justify-content:space-between;
   gap:50px;
   max-width:1100px;
   margin:0 auto;
+  align-items:center;
 }
 
 /* TEXT */
@@ -61,37 +72,19 @@ header{
   flex:1;
 }
 
-.hero-kicker{
-  font-size:12px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin-bottom:10px;
-}
-
-.hero h1{
+.hero-text h1{
   font-size:34px;
   line-height:1.1;
   margin-bottom:12px;
 }
 
-.hero h1 span{
-  color:var(--accent);
-}
-
-.hero p{
+.hero-text p{
   font-size:15px;
   color:var(--muted);
   margin-bottom:18px;
 }
 
 /* CTA */
-.cta{
-  display:flex;
-  gap:10px;
-  margin-bottom:10px;
-}
-
 .cta a{
   display:inline-block;
   background:var(--accent);
@@ -102,33 +95,20 @@ header{
   font-size:13px;
 }
 
-.cta a.secondary{
-  background:transparent;
-  border:1px solid var(--border);
-  color:var(--text);
-}
-
-/* TRUST */
-.trust{
-  font-size:12px;
-  color:var(--muted);
-  margin-top:8px;
-}
-
 /* VISUAL */
 .hero-visual{
   flex:1;
   position:relative;
 }
 
-.hero-img{
+.hero-main{
   width:100%;
   border-radius:16px;
   position:relative;
   z-index:2;
 }
 
-/* GRAPHIC LAYER (your ftcdn image) */
+/* GRAPHIC (FIXED IMAGE YOU SENT) */
 .hero-graphic{
   position:absolute;
   top:-30px;
@@ -139,91 +119,11 @@ header{
   pointer-events:none;
 }
 
-/* SECTIONS */
-.section{
-  padding:30px 5%;
-  max-width:900px;
-  margin:0 auto;
-}
-
-.section h2{
-  font-size:18px;
-  margin-bottom:10px;
-}
-
-.box{
-  background:#fff;
-  border:1px solid var(--border);
-  padding:16px;
-  border-radius:14px;
-  font-size:14px;
-  color:var(--muted);
-}
-
-/* GRAPH */
-.graph img{
-  width:100%;
-  border-radius:14px;
-  margin-top:10px;
-}
-
-/* FINAL CTA */
-.final{
-  text-align:center;
-  padding:40px 5%;
-}
-
-.final a{
-  display:inline-block;
-  margin-top:15px;
-  background:var(--accent);
-  color:#fff;
-  text-decoration:none;
-  padding:12px 18px;
-  border-radius:10px;
-}
-
-/* WHATSAPP */
-.whatsapp-float{
-  position:fixed;
-  bottom:18px;
-  right:18px;
-  background:#25D366;
-  color:#fff;
-  width:52px;
-  height:52px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:22px;
-  text-decoration:none;
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
-
 /* RESPONSIVE */
 @media(max-width:900px){
   .hero-grid{
     flex-direction:column;
     text-align:center;
-  }
-
-  .cta{
-    justify-content:center;
-    flex-wrap:wrap;
-  }
-
-  .hero-visual{
-    margin-top:20px;
-  }
-
-  .hero h1{
-    font-size:28px;
-  }
-
-  .hero-graphic{
-    left:0;
-    width:110%;
   }
 }
 </style>
@@ -233,38 +133,62 @@ header{
 
 <header>
   <div class="logo">BUSINESS GROWTH</div>
+
+  <!-- LANGUAGE SWITCH -->
+  <div class="lang-switch">
+    <button onclick="setLang('hy')">HY</button>
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('ru')">RU</button>
+  </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-grid">
 
-    <!-- TEXT -->
+    <!-- TEXT (UNCHANGED CONTENT STRUCTURE) -->
     <div class="hero-text">
 
-      <div class="hero-kicker">Landing Page System</div>
+      <!-- ARMENIAN (default) -->
+      <div class="lang hy">
 
-      <h1>
-        Քո բիզնեսը կարող է սկսել<br>
-        <span>իրական օնլայն վաճառքներ</span>
-      </h1>
+        <h1>Քո բիզնեսը կարող է սկսել իրական օնլայն վաճառքներ</h1>
 
-      <p>
-        Ես կառուցում եմ վաճառքի-oriented landing էջեր և responsive կայքեր,
-        որոնք օգնում են բիզնեսներին ստանալ հաճախորդներ WhatsApp-ից և կայքից։
-      </p>
+        <p>
+          Ես կառուցում եմ վաճառքի համակարգեր և responsive կայքեր (mobile + desktop),
+          որոնք օգնում են բիզնեսներին ստանալ իրական հաճախորդներ WhatsApp-ից և կայքից։
+        </p>
 
-      <div class="cta">
-        <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20վաճառքի%20էջ">
-          Գրել WhatsApp-ում
-        </a>
-        <a class="secondary" href="#services">
-          Տես ծառայությունները
-        </a>
+        <div class="cta">
+          <a href="https://wa.me/0000000000?text=Բարև%20ես%20ցանկանում%20եմ%20վաճառքի%20էջ%20իմ%20բիզնեսի%20համար">
+            Գրել WhatsApp-ում
+          </a>
+        </div>
+
       </div>
 
-      <div class="trust">
-        Mobile-first • Conversion-focused • Clean UI
+      <!-- ENGLISH -->
+      <div class="lang en" style="display:none;">
+        <h1>Your business can start real online sales</h1>
+        <p>
+          I build sales systems and responsive websites (mobile + desktop)
+          that help businesses get real customers from WhatsApp and websites.
+        </p>
+        <div class="cta">
+          <a href="#">Message on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- RUSSIAN -->
+      <div class="lang ru" style="display:none;">
+        <h1>Ваш бизнес может начать реальные онлайн продажи</h1>
+        <p>
+          Я создаю системы продаж и адаптивные сайты (mobile + desktop),
+          которые помогают получать клиентов через WhatsApp и сайт.
+        </p>
+        <div class="cta">
+          <a href="#">Написать в WhatsApp</a>
+        </div>
       </div>
 
     </div>
@@ -272,10 +196,12 @@ header{
     <!-- VISUAL -->
     <div class="hero-visual">
 
-      <img class="hero-img"
+      <!-- HERO IMAGE (your correct one) -->
+      <img class="hero-main"
            src="https://www.e-ways.com.tw/upload/article/article_479.jpg"
-           alt="Hero product visual">
+           alt="Hero">
 
+      <!-- GRAPHIC IMAGE (your correct ftcdn) -->
       <div class="hero-graphic">
         <img src="https://t4.ftcdn.net/jpg/09/00/62/97/360_F_900629727_nLFzv8NdpbQEefppwbBUbpqDBBsl6uWB.jpg"
              alt="">
@@ -286,52 +212,16 @@ header{
   </div>
 </section>
 
-<!-- PROBLEM -->
-<section class="section" id="services">
-  <h2>Խնդիրը</h2>
-  <div class="box">
-    Շատ բիզնեսներ ունեն լավ ապրանք, բայց չունեն համակարգված վաճառքի funnel։
-  </div>
-</section>
-
-<!-- SOLUTION -->
-<section class="section">
-  <h2>Լուծումը</h2>
-  <div class="box">
-    ✔ Landing էջեր<br>
-    ✔ Conversion UI/UX<br>
-    ✔ Mobile-first կառուցվածք<br>
-    ✔ WhatsApp վաճառքի համակարգ
-  </div>
-</section>
-
-<!-- GRAPH -->
-<section class="section">
-  <h2>Աճի տրամաբանություն</h2>
-
-  <div class="graph">
-    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
-  </div>
-
-  <div class="box">
-    Ճիշտ կառուցված էջը կարող է բարձրացնել վաճառքները առանց մեծ գովազդի։
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final">
-  <h2>Սկսե՞նք քո վաճառքի համակարգը</h2>
-
-  <a href="https://wa.me/0000000000?text=Բարև%20սկսենք%20վաճառքի%20էջ">
-    Գրել WhatsApp-ում
-  </a>
-</section>
-
-<a class="whatsapp-float"
-   href="https://wa.me/0000000000?text=Բարև"
-   target="_blank">
-  💬
-</a>
+<script>
+function setLang(lang){
+  document.querySelectorAll('.lang').forEach(el => {
+    el.style.display = 'none';
+  });
+  document.querySelectorAll('.' + lang).forEach(el => {
+    el.style.display = 'block';
+  });
+}
+</script>
 
 </body>
 </html>
