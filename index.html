@@ -128,6 +128,14 @@ header{
   margin-top:10px;
 }
 
+/* SERVICES */
+.services-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:10px;
+}
+
 /* FINAL */
 .final{
   text-align:center;
@@ -155,6 +163,8 @@ header{
   align-items:center;
   justify-content:center;
   color:#fff;
+  text-decoration:none;
+  font-size:22px;
 }
 </style>
 </head>
@@ -182,7 +192,7 @@ header{
       <p id="hero_text"></p>
 
       <div class="cta">
-        <a id="cta_btn" href="https://wa.me/0000"></a>
+        <a id="cta_btn" href="" target="_blank"></a>
       </div>
     </div>
 
@@ -201,10 +211,19 @@ header{
   </div>
 </section>
 
-<!-- SERVICES SHORT -->
+<!-- SERVICES -->
 <section class="section">
   <h2 id="services_title"></h2>
+
   <div class="highlight" id="services_intro"></div>
+
+  <div class="services-grid">
+    <div class="card" id="s1"></div>
+    <div class="card" id="s2"></div>
+    <div class="card" id="s3"></div>
+    <div class="card" id="s4"></div>
+    <div class="card" id="s5"></div>
+  </div>
 </section>
 
 <!-- GROWTH -->
@@ -221,14 +240,22 @@ header{
 <!-- FINAL -->
 <section class="final">
   <h2 id="final_title"></h2>
-  <a id="final_cta" href="https://wa.me/0000"></a>
+  <a id="final_cta" href="" target="_blank"></a>
 </section>
 
 </div>
 
-<a class="whatsapp-float" href="https://wa.me/0000">💬</a>
+<a class="whatsapp-float" id="wa_float" href="" target="_blank">💬</a>
 
 <script>
+
+/* 🔥 ONLY CHANGE NUMBER HERE */
+const WHATSAPP_NUMBER = "0000";
+
+function waLink(text){
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
+
 const content = {
 
 hy:{
@@ -236,14 +263,20 @@ hy:{
   hero_text:"Ես օգնում եմ փոքր բիզնեսներին ստեղծել վաճառքի էջեր, որոնք բերում են իրական հաճախորդներ։",
   cta:"Գրել WhatsApp-ում",
 
-  value_1:"Shopify խանութը դիզայնի խնդիր չէ — այն վաճառքի համակարգ է։",
-  value_2:"Շատ խանութներ չեն աշխատում, որովհետև դրանք կառուցված չեն վաճառքի կառուցվածքով։",
+  value_1:"Քո բիզնեսի վեբ կայքը պարզապես դիզայն չէ — այն վաճառք ապահովող համակարգ է։",
+  value_2:"Շատ կայքեր արդյունավետ չեն աշխատում, որովհետև չունեն կառուցված վաճառքի համակարգ։",
 
-  services_title:"Իմ մոտեցումը",
-  services_intro:"Ես կառուցում եմ վաճառքի կենտրոնացված Shopify համակարգեր, ոչ պարզապես կայքեր։",
+  services_title:"Իմ կողմից տրամադրվող ծառայություններ",
+  services_intro:"UI/UX դիզայն, վեբ կայքերի կառուցում և վաճառքի համակարգերի ստեղծում՝ Success Academy-ում ստացած մասնագիտական պատրաստվածությամբ։",
+
+  s1:"Վաճառք ապահովող landing էջերի կառուցում",
+  s2:"Shopify store setup և կարգավորում",
+  s3:"Responsive կայքերի կառուցում",
+  s4:"Redesign & optimization",
+  s5:"Apps & Tools ինտեգրում",
 
   growth_title:"Աճի պատկերացում",
-  growth_text:"Ճիշտ կառուցված վաճառքի էջը կարող է զգալիորեն ավելացնել քո վաճառքները՝ առանց լրացուցիչ գովազդային բյուջեի։",
+  growth_text:"Ճիշտ կառուցված վաճառքի էջը կարող է զգալիորեն ավելացնել քո վաճառքները՝ առանց լրացուցիչ գովազդի։",
 
   final_title:"Եկ ստեղծենք էջ, որը աշխատում է քո փոխարեն",
   final_cta:"Սկսել հիմա"
@@ -255,13 +288,19 @@ en:{
   cta:"Message on WhatsApp",
 
   value_1:"A Shopify store is not a design problem — it is a conversion system.",
-  value_2:"Most stores fail because they are not built with a sales structure.",
+  value_2:"Most websites fail because they lack a structured sales system.",
 
-  services_title:"My approach",
-  services_intro:"I build conversion-focused Shopify systems, not just websites.",
+  services_title:"Services I provide",
+  services_intro:"UI/UX design, website development, and sales system creation.",
+
+  s1:"High-converting landing pages",
+  s2:"Shopify store setup",
+  s3:"Responsive websites",
+  s4:"Redesign & optimization",
+  s5:"Apps & tools integration",
 
   growth_title:"Growth overview",
-  growth_text:"A properly structured sales page can significantly increase sales without additional ad budget.",
+  growth_text:"A properly structured sales page increases conversions without extra ads.",
 
   final_title:"Let’s build a page that works for you",
   final_cta:"Start now"
@@ -273,13 +312,19 @@ ru:{
   cta:"Написать в WhatsApp",
 
   value_1:"Shopify-магазин — это не дизайн, а система продаж.",
-  value_2:"Большинство магазинов не работают, потому что у них нет структуры продаж.",
+  value_2:"Многие сайты не работают из-за отсутствия структуры продаж.",
 
-  services_title:"Мой подход",
-  services_intro:"Я создаю Shopify-системы, ориентированные на конверсию, а не просто сайты.",
+  services_title:"Предоставляемые услуги",
+  services_intro:"UI/UX дизайн, разработка сайтов и создание систем продаж.",
 
-  growth_title:"Обзор роста",
-  growth_text:"Правильно построенная продающая страница может значительно увеличить продажи без дополнительной рекламы.",
+  s1:"Продающие лендинги",
+  s2:"Настройка Shopify магазина",
+  s3:"Адаптивные сайты",
+  s4:"Редизайн и оптимизация",
+  s5:"Интеграция приложений",
+
+  growth_title:"Рост",
+  growth_text:"Хорошо структурированная страница увеличивает продажи без рекламы.",
 
   final_title:"Давайте создадим страницу, которая работает за вас",
   final_cta:"Начать сейчас"
@@ -291,7 +336,11 @@ function setLang(lang){
 
   document.getElementById("hero_title").innerText = content[lang].hero_title;
   document.getElementById("hero_text").innerText = content[lang].hero_text;
+
   document.getElementById("cta_btn").innerText = content[lang].cta;
+  document.getElementById("cta_btn").href = waLink(content[lang].cta);
+
+  document.getElementById("wa_float").href = waLink("Hello");
 
   document.getElementById("value_1").innerText = content[lang].value_1;
   document.getElementById("value_2").innerText = content[lang].value_2;
@@ -299,14 +348,22 @@ function setLang(lang){
   document.getElementById("services_title").innerText = content[lang].services_title;
   document.getElementById("services_intro").innerText = content[lang].services_intro;
 
+  document.getElementById("s1").innerText = content[lang].s1;
+  document.getElementById("s2").innerText = content[lang].s2;
+  document.getElementById("s3").innerText = content[lang].s3;
+  document.getElementById("s4").innerText = content[lang].s4;
+  document.getElementById("s5").innerText = content[lang].s5;
+
   document.getElementById("growth_title").innerText = content[lang].growth_title;
   document.getElementById("growth_text").innerText = content[lang].growth_text;
 
   document.getElementById("final_title").innerText = content[lang].final_title;
   document.getElementById("final_cta").innerText = content[lang].final_cta;
+  document.getElementById("final_cta").href = waLink(content[lang].final_cta);
 }
 
 setLang('hy');
+
 </script>
 
 </body>
